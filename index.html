@@ -216,10 +216,34 @@
         </div>
     </div>
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyDzOo657WbxTVPI0EHtospqgHol0OrsGXU",
+            authDomain: "project-1-93353.firebaseapp.com",
+            databaseURL: "https://project-1-93353.firebaseio.com",
+            projectId: "project-1-93353",
+            storageBucket: "",
+            messagingSenderId: "667158939513",
+            appId: "1:667158939513:web:b9329b853bc61409"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.database();
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script type="text/javascript" src="javascript/auth.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type= "text/javascript" src="javascript/app.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>
