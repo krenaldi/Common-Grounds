@@ -3,10 +3,59 @@
 #lg-reg{
    background-color: #78CACB;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   letter-spacing: 2px;
+   font-weight: bold;
    border-color: #419798;
-   margin:0 auto;
+   margin: auto;
    display:block;
+   width:200px;
+
 }
+
+.nav-item{
+   color: #808080;
+}
+
+.nav-item:active {
+   color: #808080;
+}
+
+#navbarNav{
+   margin-left: 100px;
+}
+
+#nav-login,
+#nav-register{
+   margin-right: 50px;
+   font-weight: bold;
+}
+
+#logo{
+   margin-left: 50px;
+}
+
+.navbar-brand{
+   font-family: 'Amatic SC', cursive;
+   color: #808080;
+   letter-spacing: 2px;
+   font-weight: bold;
+   font-size: 30px;
+}
+
+.navbar-brand:hover{
+   color: #B3B3B3;
+}
+
+
+
+#test-right,
+#test-left{
+   width: 50%;
+   position: absolute;
+   bottom: 10px;
+   left: 25%;
+}
+
 
 
 p{
@@ -39,14 +88,12 @@ p{
 #log-txt,
 #reg-txt{
    text-align: center;
-   margin-bottom: 15px;
+   margin-bottom: 10px;
+   
 }
 
 
-#lg-log,
-#lg-reg{
-   width: 50%;
-}
+
 
 
 #lg-start{
@@ -77,6 +124,21 @@ p{
    font-style: oblique;
 }
 
+
+.form-group{
+   margin: -10px;
+}
+ /* this line of code is temporary*/
+#coming-soon{
+   height: 300px;
+   width: 300px;
+   margin: 40px 0 0 520px;
+
+}
+ /* this line of code is temporary*/
+#coming-soon-1{
+   margin-left: 300px;
+}
 
 
 
