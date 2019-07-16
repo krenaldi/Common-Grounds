@@ -3,10 +3,24 @@
 #lg-reg{
    background-color: #78CACB;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   letter-spacing: 2px;
+   font-weight: bold;
    border-color: #419798;
-   margin:0 auto;
+   margin: auto;
    display:block;
+   width:200px;
+
 }
+
+
+#test-right,
+#test-left{
+   width: 50%;
+   position: absolute;
+   bottom: 10px;
+   left: 25%;
+}
+
 
 
 p{
@@ -39,14 +53,12 @@ p{
 #log-txt,
 #reg-txt{
    text-align: center;
-   margin-bottom: 15px;
+   margin-bottom: 10px;
+   
 }
 
 
-#lg-log,
-#lg-reg{
-   width: 50%;
-}
+
 
 
 #lg-start{
@@ -75,6 +87,11 @@ p{
    background-color: #419798;
    border-color:#78CACB;
    font-style: oblique;
+}
+
+
+.form-group{
+   margin: -10px;
 }
 
 
