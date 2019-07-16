@@ -12,6 +12,41 @@
 
 }
 
+.nav-item{
+   color: #808080;
+}
+
+.nav-item:active {
+   color: #808080;
+}
+
+#navbarNav{
+   margin-left: 100px;
+}
+
+#nav-login,
+#nav-register{
+   margin-right: 50px;
+   font-weight: bold;
+}
+
+#logo{
+   margin-left: 50px;
+}
+
+.navbar-brand{
+   font-family: 'Amatic SC', cursive;
+   color: #808080;
+   letter-spacing: 2px;
+   font-weight: bold;
+   font-size: 30px;
+}
+
+.navbar-brand:hover{
+   color: #B3B3B3;
+}
+
+
 
 #test-right,
 #test-left{
