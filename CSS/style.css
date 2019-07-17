@@ -1,3 +1,7 @@
+*{
+   box-sizing: border-box;
+}
+
 /* buttons */
 
 #lg-start,
@@ -65,7 +69,7 @@ color:  #330000;
 }
 
 .navbar-brand:hover{
-   color: #330000;
+   color: #330000ab;
 }
 
 
@@ -130,7 +134,7 @@ margin-right: 20px;
 
 button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
    background-color:rgb(15, 92, 131);
-   border-color:#3399CC;
+   border-color: 1px solid #3399CC;
    font-style: oblique;
 
 }
@@ -147,10 +151,143 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
    margin: 40px 0 0 520px;
 
 }
- /* this line of code is temporary*/
-#coming-soon-1{
-   margin-left: 300px;
+/*About page css starts here */
+/* search div */
+.search{
+   position: relative;
+   margin-left: 1%;
+   width: 98%;
+   height: auto;
+   background-color: rgba(245, 241, 241, 0.514);
+   margin-top: 1%;
+   padding: 1%;
+   border-radius: 3px;
+}
+.search:hover{
+   background-color: #a8a1a163;
+}
+#input-search{
+   margin-left: 10%;
+   width: 50%;
+   border: 1px solid  #CDB99C;
+   padding: 5px;
+
+}
+#input-search:hover{
+   border: 1px solid transparent;
+}
+#btn-search{
+   padding: 5px;
 }
 
+/* chat and map container*/
 
+.main-container{
+   width: 100%;
+}
+.row{
+   width: 96%;
+   height: auto;
+   margin-left: 1%;
+   margin-top: 1px;
+   color: #330000;
 
+}
+.col-sm-3:hover, .col-sm-8:hover{
+   box-shadow: 0 0 2px 2px  #CDB99C;
+
+}
+
+/*chat div*/
+.col-sm-3{
+   position: relative;
+   background-color: white;
+   color: #330000ab;
+   height: 400px;
+   padding: 5px;
+   margin-left: 1%;
+   margin-top: 1%;
+   border-radius: 5px;
+   box-shadow: 0 0 2px 2px  rgba(128, 128, 128, 0.589);
+
+}
+/*header for chat list*/
+.chat{
+   text-align: center;
+   padding:5px;
+   width: 100%;
+   height: auto;
+   background: #6666663f;
+   margin: 2% 1% 1% 1%;
+   border-radius: 3px;
+}
+#chat-userName{
+   padding:5px;
+   width: 100%;
+   height: auto;
+   background: #6666663f;
+   margin: 2% 1% 1% 1%;
+   border-radius: 3px;
+}
+/*map div*/
+.col-sm-8{
+   position: relative;
+   background-color: white;
+   color: #330000ab;
+   height: auto;
+   padding: 0;
+   margin: 1% 0 1% 2%;
+   border-radius: 5px;
+   box-shadow: 0 0 2px 2px  rgba(128, 128, 128, 0.589);
+
+}
+
+/*map setting goes here*/
+#googleMap{
+   width: 98%;
+   height: 400px;
+   margin: 1% 0 0 1%;
+   border: 1px solid grey; /*temporary*/
+   background-color: #c9c0c0a2; /*temporary*/
+}
+/*col-sm-8 sub-container */
+
+/*div for places start here*/
+/*This div seprate map and content*/
+.search-result{
+   width: 100%;
+   height: auto;
+   margin-top: 1%;
+}
+/*this div hold all results div together*/
+.place-results{
+   position: relative;
+   width: 100%;
+   height: auto;
+   border: 1px  transparent;
+   border-radius: 4px;
+}
+
+/*this div hold individual results with images*/
+#display-img-content{
+   position: relative;
+   width: 100%;
+   height: auto;
+   padding: 10px;
+   border: 1px  transparent;
+   border-radius: 4px;
+}
+
+#sample-img{
+   float: left;
+   width: 150px;
+   height: 150px;
+   padding: 5px;
+
+}
+
+hr{
+   border: 1px solid #CDB99C;
+   width: 90%;
+   float: center;
+}
