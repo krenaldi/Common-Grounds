@@ -6,40 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <title>Common Grounds</title>
 </head>
 
 <body>
-
-
-    <!-- Image and text -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.html">
             <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
             Common Grounds
         </a>
-     
-
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" id="about-topnav">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="login-topnav">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="register-topnav">Register</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="container-fluid"></div>
     <div class="row">
@@ -89,7 +84,6 @@
         GET STARTED
     </button>
 
-
     <!-- GET STARTED trigger modal -->
     <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -100,14 +94,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
 
-
                             <!-- LOG IN form -->
-
                             <div class="col-md-5" id="modal-log">
                                 <form id="login-form">
                                     <!-- Unique Id -->
@@ -123,15 +114,12 @@
                                             placeholder="Password">
                                     </div>
 
-
-
-
                                     <!-- LOG IN button -->
                                     <div id="test-left">
                                         <div id="log-txt">
                                             Already have an account?
                                         </div>
-                                        <button type="login" class="btn btn-primary" id="lg-log">LOG IN</button>
+                                        <button type="button" class="btn btn-primary" id="lg-log" data-dismiss="modal">LOG IN</button>
                                     </div>
 
                                 </form>
@@ -179,16 +167,11 @@
                                             Don't have an account?
                                         </div>
 
-                                        <button type="register" class="btn btn-primary" id="lg-reg">REGISTER</button>
+                                        <button type="submit" class="btn btn-primary" id="lg-reg" data-dismiss="modal">REGISTER</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -196,8 +179,12 @@
         </div>
     </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
     <script>
         // Initialize Firebase
         var firebaseConfig = {
@@ -215,19 +202,10 @@
         // make auth and firestore references
         const auth = firebase.auth();
         const db = firebase.database();
-        // update firestore settings
-        db.settings({ timestampsInSnapshots: true });
     </script>
-    <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
-
     <script type="text/javascript" src="javascript/auth.js"></script>
-    <script type="text/javascript" src="javascript/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-    <script type= "text/javascript" src="javascript/app.js"></script>
+    <!-- <script type="text/javascript" src="javascript/index.js"></script> -->
+    <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>

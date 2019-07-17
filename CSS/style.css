@@ -18,6 +18,17 @@
 }
 
 
+.nav-link{
+   color:  #CDB99C;;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   letter-spacing: 2px;
+   }
+
+.nav-link:hover{
+color:  #330000;
+}
+
+
 /* .nav-item:active {
    color: #808080;
 } */
@@ -32,6 +43,10 @@
    font-weight: bold;
    color: #CDB99C;
 
+}
+
+#navbarNav {
+   margin-right: 100px
 }
 
 #nav-login:hover,
@@ -90,6 +105,11 @@ p{
 
 }
 
+#about-topnav,
+#login-topnav,
+#register-topnav{
+margin-right: 20px;
+}
 
 .modal-title{
    color:#666666;
