@@ -1,5 +1,3 @@
-
-
   var users = {
       Angela: ["Angela", "New Brunswick, NJ"],
       Tom: ["Tom", "Brooklyn, NY"],
@@ -54,8 +52,3 @@ function searchArea() {
     // and use geolocated midpoint as start point
 }
 
-
-
-
-
-  
