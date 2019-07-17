@@ -73,7 +73,7 @@
                 porttitor, neque id accumsan fringilla, quam metus ornare velit, eu venenatis sem felis at lacus.
                 Nullam non libero eu libero convallis aliquam. Vivamus ultrices augue ac hendrerit pellentesque.
             </p>
-            
+
         </div>
 
 
@@ -110,13 +110,13 @@
                                     <!-- Unique Id -->
                                     <div class="form-group">
                                         <label for="log-email"></label>
-                                        <input type="email" class="form-control" id="log-email"
+                                        <input type="email" class="form-control" id="login-email"
                                             aria-describedby="emailHelp" placeholder="Email">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1"></label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                        <input type="password" class="form-control" id="login-password"
                                             placeholder="Password">
                                     </div>
 
@@ -145,16 +145,16 @@
                                 <form id="register-form">
                                     <!--Unique Id-->
                                     <div class="form-group">
-                                        <label for="firstnameInput"></label>
-                                        <input type="firstname" class="form-control" id="firstnameInput"
+                                        <label for="firstname"></label>
+                                        <input type="firstname" class="form-control" id="firstname"
                                             aria-describedby="firstnameHelp" placeholder="First Name">
                                     </div>
 
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="lastnameInput"></label>
                                         <input type="lastname" class="form-control" id="lastnameInput"
                                             aria-describedby="lastnameHelp" placeholder="Last Name">
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group">
                                         <label for="reg-email"></label>
@@ -163,8 +163,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1"></label>
-                                        <input type="password" class="form-control" id="password"
+                                        <label for="password"></label>
+                                        <input type="password" class="form-control" id="reg-password"
                                             placeholder="Password">
                                     </div>
 
@@ -204,12 +204,13 @@
             messagingSenderId: "667158939513",
             appId: "1:667158939513:web:b9329b853bc61409"
         };
+
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
         // make auth and firestore references
-        const auth = firebase.auth();
-        const db = firebase.database();
+        var auth = firebase.auth();
+        var db = firebase.database();
     </script>
     <script type="text/javascript" src="javascript/auth.js"></script>
     <!-- <script type="text/javascript" src="javascript/index.js"></script> -->
