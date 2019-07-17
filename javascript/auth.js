@@ -10,9 +10,7 @@ registerForm.addEventListener('submit', (e) => {
   // sign up the user
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     console.log(cred.user);
-    // close the signup modal & reset form
-    const modal = document.querySelector('#modal-body');
-    getInstance(modal).close();
-    signupForm.reset();
+    // reset form
+    registerForm.reset();
   });
 });
