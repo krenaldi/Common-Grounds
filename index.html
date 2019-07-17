@@ -21,40 +21,19 @@
             <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
             Common Grounds
         </a>
-        <div>
-            <a class="navbar-brand" href="#">
-                <h3 id="nav-login" class="d-inline-block align-top" alt="">
-                    Log In </h3>
-            </a>
-            <a class="navbar-brand" href="#">
-                <h3 id="nav-register" class="d-inline-block align-top" alt="">
-                    Register</h3>
-            </a>
-        </div>
+     
 
     </nav>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button> -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Get Started</a>
 
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
+
+
+
+
+
 
 
 
@@ -216,10 +195,37 @@
         </div>
     </div>
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyDzOo657WbxTVPI0EHtospqgHol0OrsGXU",
+            authDomain: "project-1-93353.firebaseapp.com",
+            databaseURL: "https://project-1-93353.firebaseio.com",
+            projectId: "project-1-93353",
+            storageBucket: "",
+            messagingSenderId: "667158939513",
+            appId: "1:667158939513:web:b9329b853bc61409"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.database();
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
+    <script type="text/javascript" src="javascript/auth.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type= "text/javascript" src="javascript/app.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>

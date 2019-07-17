@@ -1,24 +1,22 @@
+/* buttons */
+
 #lg-start,
 #lg-log,
 #lg-reg{
-   background-color: #78CACB;
+   background-color: #3399CC;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    letter-spacing: 2px;
    font-weight: bold;
-   border-color: #419798;
+   border-color: rgb(15, 92, 131);
    margin: auto;
    display:block;
    width:200px;
-
 }
 
-.nav-item{
+
+/* .nav-item:active {
    color: #808080;
-}
-
-.nav-item:active {
-   color: #808080;
-}
+} */
 
 #navbarNav{
    margin-left: 100px;
@@ -28,7 +26,16 @@
 #nav-register{
    margin-right: 50px;
    font-weight: bold;
+   color: #CDB99C;
+
 }
+
+#nav-login:hover,
+#nav-register:hover{
+   color: #330000;
+}
+
+
 
 #logo{
    margin-left: 50px;
@@ -36,14 +43,14 @@
 
 .navbar-brand{
    font-family: 'Amatic SC', cursive;
-   color: #808080;
+   color: #CDB99C;
    letter-spacing: 2px;
    font-weight: bold;
    font-size: 30px;
 }
 
 .navbar-brand:hover{
-   color: #B3B3B3;
+   color: #330000;
 }
 
 
@@ -62,6 +69,7 @@ p{
    text-align: justify;
    padding: 5px;
    margin: 15px;
+   color: #330000;
 }
 
 
@@ -93,9 +101,6 @@ p{
 }
 
 
-
-
-
 #lg-start{
    width: 20%;
    padding: 15px;
@@ -103,26 +108,13 @@ p{
 }
 
 
-#lg-log:hover{
-   background-color: #419798;
-   border-color:#78CACB;
+button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
+   background-color:rgb(15, 92, 131);
+   border-color:#3399CC;
    font-style: oblique;
 
 }
 
-
-#lg-reg:hover{
-   background-color: #419798;
-   border-color:#78CACB;
-   font-style: oblique;
-}
-
-
-#lg-start:hover{
-   background-color: #419798;
-   border-color:#78CACB;
-   font-style: oblique;
-}
 
 
 .form-group{
