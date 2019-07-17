@@ -16,23 +16,38 @@
 
 
     <!-- Image and text -->
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <a class="navbar-brand" href="index.html">
             <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
             Common Grounds
         </a>
-     
+    
+    </nav> -->
 
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
+            Common Grounds
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" id="about-topnav">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="login-topnav">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="register-topnav">Register</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -218,8 +233,8 @@
         db.settings({ timestampsInSnapshots: true });
     </script>
     <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
 
     <script type="text/javascript" src="javascript/auth.js"></script>
     <script type="text/javascript" src="javascript/index.js"></script>
