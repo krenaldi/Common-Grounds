@@ -30,6 +30,7 @@ registerForm.addEventListener('submit', (e) => {
         // reset form
         registerForm.reset();
     });
+    // close modal
     closeRegModal();
 });
 
@@ -40,4 +41,22 @@ logout.addEventListener('click', (e) => {
     auth.signOut().then(() => {
         console.log('user signed out');
     });
+});
+
+// login
+const loginForm = document.querySelector('#login-form');
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // get user info
+    const email = loginForm['login-email'].value;
+    const password = loginForm['login-password'].value;
+
+    auth.signInWithEmailAndPassword(email, password).then(cred => {
+        console.log(cred.user);
+        // reset form
+        loginForm.reset();
+    });
+    // close modal
+    closeLogModal();
 });
