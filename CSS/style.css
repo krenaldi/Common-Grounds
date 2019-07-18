@@ -105,9 +105,7 @@ p{
 
 }
 
-#about-topnav,
-#login-topnav,
-#register-topnav{
+.nav-link {
 margin-right: 20px;
 }
 
