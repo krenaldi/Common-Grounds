@@ -26,12 +26,15 @@ registerForm.addEventListener('submit', (e) => {
 
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        console.log(cred.user);
+        return db.ref('users/' + cred.user.uid).set({
+            displayname: registerForm['displayName'].value
+        });
+    }).then(() => {
         // reset form
         registerForm.reset();
+        // close modal
+        closeRegModal();
     });
-    // close modal
-    closeRegModal();
 });
 
 // logout
