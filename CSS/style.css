@@ -6,7 +6,8 @@
 
 #lg-start,
 #lg-log,
-#lg-reg{
+#lg-reg,
+#lg-submit{
    background-color: #3399CC;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    letter-spacing: 2px;
@@ -130,7 +131,7 @@ margin-right: 20px;
 }
 
 
-button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
+button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submit:hover{
    background-color:rgb(15, 92, 131);
    border-color: 1px solid #3399CC;
    font-style: oblique;
@@ -138,10 +139,12 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
 }
 
 
-
-.form-group{
-   margin: -10px;
+#contact-wrapper{
+   margin-top:20px;
 }
+
+
+
  /* this line of code is temporary*/
 #coming-soon{
    height: 300px;
