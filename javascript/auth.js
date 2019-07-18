@@ -2,13 +2,13 @@ const regButton = $('#lg-reg');
 //console.log(regButton);
 const logButton = $("#lg-log");
 
-function closeRegModal(){
+function closeRegModal() {
     regButton.attr("data-dismiss", "modal");
     regButton.trigger('click');
     regButton.removeAttr("data-dismiss", "modal");
 }
 
-function closeLogModal(){
+function closeLogModal() {
     logButton.attr("data-dismiss", "modal");
     logButton.trigger('click');
     logButton.removeAttr("data-dismiss", "modal");
@@ -23,7 +23,7 @@ registerForm.addEventListener('submit', (e) => {
     // get user info
     const email = registerForm['reg-email'].value;
     const password = registerForm['reg-password'].value;
-    
+
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         console.log(cred.user);
@@ -31,4 +31,13 @@ registerForm.addEventListener('submit', (e) => {
         registerForm.reset();
     });
     closeRegModal();
+});
+
+// logout
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e) => {
+    e.preventDefault();
+    auth.signOut().then(() => {
+        console.log('user signed out');
+    });
 });
