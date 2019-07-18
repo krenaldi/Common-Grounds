@@ -12,8 +12,6 @@
 </head>
 
 <body>
-
-
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.html">
             <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
@@ -26,18 +24,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" id="about-topnav">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" id="">About <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="login-topnav">Log In</a>
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="#" id="">Profile</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="register-topnav">Register</a>
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="#" id="logout">Log Out</a>
+                </li>
+                <li class="nav-item logged-out" style="display: none;">
+                    <a class="nav-link" href="#" id="">Log In</a>
+                </li>
+                <li class="nav-item logged-out" style="display: none;">
+                    <a class="nav-link" href="#" id="">Register</a>
                 </li>
             </ul>
         </div>
     </nav>
-
 
     <div class="container-fluid"></div>
     <div class="row">
@@ -70,6 +73,7 @@
                 porttitor, neque id accumsan fringilla, quam metus ornare velit, eu venenatis sem felis at lacus.
                 Nullam non libero eu libero convallis aliquam. Vivamus ultrices augue ac hendrerit pellentesque.
             </p>
+
         </div>
 
 
@@ -103,16 +107,15 @@
                             <!-- LOG IN form -->
                             <div class="col-md-5" id="modal-log">
                                 <form id="login-form">
-                                    <!-- Unique Id -->
                                     <div class="form-group">
                                         <label for="log-email"></label>
-                                        <input type="email" class="form-control" id="log-email"
+                                        <input type="email" class="form-control" id="login-email"
                                             aria-describedby="emailHelp" placeholder="Email">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1"></label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                        <label for="login-password"></label>
+                                        <input type="password" class="form-control" id="login-password"
                                             placeholder="Password">
                                     </div>
 
@@ -121,7 +124,7 @@
                                         <div id="log-txt">
                                             Already have an account?
                                         </div>
-                                        <button type="button" class="btn btn-primary" id="lg-log" data-dismiss="modal">LOG IN</button>
+                                        <button type="submit" class="btn btn-primary" id="lg-log">LOG IN</button>
                                     </div>
 
                                 </form>
@@ -138,17 +141,9 @@
                             <!-- REGISTER form -->
                             <div class="col-md-5" id="modal-log">
                                 <form id="register-form">
-                                    <!--Unique Id-->
                                     <div class="form-group">
-                                        <label for="firstnameInput"></label>
-                                        <input type="firstname" class="form-control" id="firstnameInput"
-                                            aria-describedby="firstnameHelp" placeholder="First Name">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="lastnameInput"></label>
-                                        <input type="lastname" class="form-control" id="lastnameInput"
-                                            aria-describedby="lastnameHelp" placeholder="Last Name">
+                                        <label for="displayname"></label>
+                                        <input type="text" class="form-control" id="displayName" placeholder="Display Name">
                                     </div>
 
                                     <div class="form-group">
@@ -158,8 +153,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1"></label>
-                                        <input type="password" class="form-control" id="password"
+                                        <label for="reg-password"></label>
+                                        <input type="password" class="form-control" id="reg-password"
                                             placeholder="Password">
                                     </div>
 
@@ -169,7 +164,7 @@
                                             Don't have an account?
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary" id="lg-reg" data-dismiss="modal">REGISTER</button>
+                                        <button type="submit" class="btn btn-primary" id="lg-reg">REGISTER</button>
                                     </div>
                                 </form>
                             </div>
@@ -198,19 +193,16 @@
             messagingSenderId: "667158939513",
             appId: "1:667158939513:web:b9329b853bc61409"
         };
+
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
         // make auth and firestore references
-        const auth = firebase.auth();
-        const db = firebase.database();
+        var auth = firebase.auth();
+        var db = firebase.database();
     </script>
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
-
     <script type="text/javascript" src="javascript/auth.js"></script>
-    <!-- <script type="text/javascript" src="javascript/index.js"></script> -->
+    <script type="text/javascript" src="javascript/index.js"></script>
     <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
