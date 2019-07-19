@@ -1,8 +1,7 @@
 *{
    box-sizing: border-box;
 }
-
-/* buttons */
+/* buttons -  Modal */
 
 #lg-start,
 #lg-log,
@@ -137,11 +136,10 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
 
 }
 
-
-
 .form-group{
    margin: -10px;
 }
+
  /* this line of code is temporary*/
 #coming-soon{
    height: 300px;
@@ -149,6 +147,8 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
    margin: 40px 0 0 520px;
 
 }
+
+
 /*About page css starts here */
 /* search div */
 .search{
@@ -162,7 +162,7 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
    border-radius: 3px;
 }
 .search:hover{
-   background-color: #a8a1a163;
+   background-color: transparent;
 }
 #input-search{
    margin-left: 10%;
@@ -288,4 +288,46 @@ hr{
    border: 1px solid #CDB99C;
    width: 90%;
    float: center;
+}
+
+/*Group-page css sstart here */
+.contianer-fulid{
+   align-items: center;
+   width: 95%;
+   height: auto;
+   padding: 5%;
+   margin: 2% 2% 2% 2%;
+   background: white;
+   color: #330000;
+   border: 1px solid #CDB99C;
+   border-radius: 5px;
+}
+h2{
+   text-align: center;
+   color: #330000;
+}
+h2:hover {
+   color: #CDB99C;
+}
+
+/*form starts here*/
+#label-group-name,#label-member-name {
+display: inline;
+margin: 5px 5px;
+}
+
+#input-group-name, #input-member-name , #inputCity, #inputState, #label-group-email{
+   margin: 5px 5px;
+   width: 45%;
+   display: block;
+}
+
+.form-control-page {
+   float: left;
+}
+ 
+.btn-primary-group{
+   margin: 1% 0 0 0;
+   background-color: #3399CC;
+   color: #CDB99C;
 }
