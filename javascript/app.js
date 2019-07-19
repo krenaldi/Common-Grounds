@@ -139,7 +139,7 @@ var midLong = 0;
         console.log(response.address.state)
         var place = $("<span style='float:right; padding: 0 10% 0 0'><h4>" + response.address.city + ", " + response.address.state + "</h4></span>");
         $("#search-form").append(place);
-      });
+      }); 
       
       $("#googleMap").empty();
 
