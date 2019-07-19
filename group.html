@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <title>Common Grounds</title>
 </head>
@@ -21,152 +21,143 @@
             <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
             Common Grounds
         </a>
-        <div>
-            <a class="navbar-brand" href="#">
-                <h3 id="nav-login" class="d-inline-block align-top" alt="">
-                    Find Friends </h3>
-            </a>
-            <a class="navbar-brand" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <h3 id="nav-register" class="d-inline-block align-top" alt="">
-                    Profile</h3>
-            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="search.html" id="">Find Places</a>
+                </li>
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="group.html" id="">Create Group</a>
+                </li>
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="#" id="" data-toggle="modal"
+                        data-target=".bd-example-modal-lg">Profile</a>
+                </li>
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="#" id="logout">Log Out</a>
+                </li>
+                <li class="nav-item logged-out" style="display: none;">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modal">Log In</a>
 
+                </li>
+                <li class="nav-item logged-out" style="display: none;">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modal">Register</a>
+
+                </li>
+            </ul>
         </div>
 
     </nav>
 
-<!-- Here start the div for the search bar -->
-<div class= "search">   
-    <form id="search-form" action="">    <!-- Form for the input and search -->
-        <input type="text" placeholder="Search.." id="input-search">   <!--  Id for search input-->
-        <button type="submit"><i class="fa fa-search" id="btn-search"></i></button>   <!-- Id for search button -->
-      </form></div>
-      
-      <div class ="contianer-fulid-main">
+    <!-- Here start the div for the search bar -->
+    <div class="search">
+        <form id="search-form" action="">
+            <!-- Form for the input and search -->
+            <input type="text" placeholder="Search.." id="input-search"> <!--  Id for search input-->
+            <button type="submit"><i class="fa fa-search" id="btn-search"></i></button> <!-- Id for search button -->
+        </form>
+    </div>
+
+    <div class="contianer-fulid-main">
 
         <h2>Create Group </h2>
         <hr>
         <form>
-                <div class="form-group-page">
+            <div class="form-group-page">
 
-                       <div class="input-group"> 
-                        <label for="groupname" id ="label-group-name">Group Name</label>
-                        <input type="group-name" 
-                               class="form-control-page" 
-                               id="input-group-name" 
-                               placeholder=" Group Name">
-                            </div>
-                            
-                        <div class="input-group">
-                        <label for="membername"id ="label-member-name" >Member Name</label>
-                        <input type="member-name" 
-                               class="form-control-page" 
-                               id="input-member-name" 
-                               placeholder=" Member Name">
-                            </div>
+                <div class="input-group">
+                    <label for="groupname" id="label-group-name">Group Name</label>
+                    <input type="group-name" class="form-control-page" id="input-group-name" placeholder=" Group Name">
+                </div>
 
-                        <div class="input-group">
-                        <label for="city"id ="label-city" >City </label>
-                        <input type="city" 
-                               class="form-control-page" 
-                               id="inputCity" 
-                               placeholder=" City">
-                            </div>
-                        
-                        <div class="input-group">
-                        <label for="state"id ="label-state" >State </label>
-                        <input type="state" 
-                               class="form-control-page" 
-                               id="inputState" 
-                               placeholder=" State">
-                            </div>
-                               
-                        <div class="input-group">                        
-                        <label for="member-email" id ="label-group-email" >Member Email address</label>
-                        <input type="email" class="form-control-page" id="input-group-email" placeholder=" name@example.com">
-                        </div> 
-                        <hr class="style-one">
+                <div class="input-group">
+                    <label for="membername" id="label-member-name">Member Name</label>
+                    <input type="member-name" class="form-control-page" id="input-member-name"
+                        placeholder=" Member Name">
+                </div>
 
-                        <div class="input-group">                        
-                        <a class="group-add-more" href="#" data-toggle="form-group-page" data-target=""> Add more member </a>
-                    </div>
-                        <hr class="style-one">
+                <div class="input-group">
+                    <label for="city" id="label-city">City </label>
+                    <input type="city" class="form-control-page" id="inputCity" placeholder=" City">
+                </div>
 
-                      
-           <button type="submit" class="btn btn-primary-group">Create</button>
-        </div>
-          </form>
-      </div>
+                <div class="input-group">
+                    <label for="state" id="label-state">State </label>
+                    <input type="state" class="form-control-page" id="inputState" placeholder=" State">
+                </div>
+
+                <div class="input-group">
+                    <label for="member-email" id="label-group-email">Member Email address</label>
+                    <input type="email" class="form-control-page" id="input-group-email"
+                        placeholder=" name@example.com">
+                </div>
+                <hr class="style-one">
+
+                <div class="input-group">
+                    <a class="group-add-more" href="#" data-toggle="form-group-page" data-target=""> Add more member
+                    </a>
+                </div>
+                <hr class="style-one">
 
 
-      <!-- modal for profile starts here -->
+                <button type="submit" class="btn btn-primary-group">Create</button>
+            </div>
+        </form>
+    </div>
 
-      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <!-- modal for profile starts here -->
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg">
-          <div class="modal-content-profile">
+            <div class="modal-content-profile">
                 <button type="button" class="close-profile" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                        <div class="modal-header-profile">
-                                <h5 class="modal-title-profile">Profile</h5>
-                        </div>
-                        <hr>
-                        <form>
-                                <div class="form-group-profile">
-                
-                                       <div class="input-profile"> 
-                                        <label for="username" id ="label-user-name">User Name</label>
-                                        <input type="user-name" 
-                                               class="form-control-profile" 
-                                               id="input-user-name" 
-                                               placeholder=" User Name">
-                                            </div>
-                                            
-                                        <div class="input-profile">
-                                        <label for="fullname"id ="label-full-name" >Full Name</label>
-                                        <input type="full-name" 
-                                               class="form-control-profile" 
-                                               id="input-full-name" 
-                                               placeholder=" Full Name">
-                                            </div>
-                
-                                        <div class="input-profile">
-                                        <label for="city"id ="label-profile-city" >City </label>
-                                        <input type="city" 
-                                               class="form-control-profile" 
-                                               id="input-profile-City" 
-                                               placeholder=" City">
-                                            </div>
-                                        
-                                        <div class="input-profile">
-                                        <label for="state"id ="label-profile-state" >State </label>
-                                        <input type="state" 
-                                               class="form-control-profile" 
-                                               id="input-profile-State" 
-                                               placeholder=" State">
-                                            </div>
-                                               
-                                        <div class="input-profile">                        
-                                        <label for="profile-email" id ="label-profile-email" >Your Email address</label>
-                                        <input type="email" class="form-control-profile" id="input-profile-email" placeholder=" name@example.com">
-                                        </div> 
-                                        <hr class="style-one">                
-                                      
-                           <button type="submit" class="btn btn-primary-profile" id="profile-btn">Create</button>
-                        </div>
-                          </form>
-             </div>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-header-profile">
+                    <h5 class="modal-title-profile">Profile</h5>
+                </div>
+                <hr>
+                <div class="profile-details"></div>
+            </div>
         </div>
-      </div>
+    </div>
 
-        <!-- Modal for Profile Ends here-->
-
-        
-
+    <!-- Modal for Profile Ends here-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyDzOo657WbxTVPI0EHtospqgHol0OrsGXU",
+            authDomain: "project-1-93353.firebaseapp.com",
+            databaseURL: "https://project-1-93353.firebaseio.com",
+            projectId: "project-1-93353",
+            storageBucket: "",
+            messagingSenderId: "667158939513",
+            appId: "1:667158939513:web:b9329b853bc61409"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // make auth and firestore references
+        var auth = firebase.auth();
+        var db = firebase.database();
+    </script>
+    <script type="text/javascript" src="javascript/auth.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>
