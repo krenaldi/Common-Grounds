@@ -43,9 +43,9 @@ var tempLong = [];
 // Where the temporary Longitudes will be stored for each member
 // of the group.
 
-var midPointLat = "";
+var midLat = 0;
   // Where the Calculated Midpoint Latitude will be stored.
-var midPointLong = "";
+var midLong = 0;
   // Where the calculated Midpoint Longitude will be stored.
 
 // Will allow for each user to read the stored data
@@ -53,29 +53,29 @@ var midPointLong = "";
 
 // database.ref().on("value", function(snapshot) {
 
-//    for (i = 0; i < users.length; i++) {
+//    for ( var i = 0; i < users.length; i++) {
 
 //      users = snapshot.val().users
 
 //    }
 
-//    for (i = 0; i < groups.length; i++) {
+//    for ( var i = 0; i < groups.length; i++) {
 
 //     groups = snapshot.val().groups
 
 //    }
 
-//    midPointLat = snapshot.val().midPointLat
+//    midLat = snapshot.val().midPointLat
 
-//    midPointLong = snapshot.val().midPointLong
+//    midLong = snapshot.val().midPointLong
 
 // }, function(errorObject) {
 
 //   console.log("The read failed: " + errorObject.code);
 
 // });
-  
-
+// console.log(users)
+// console.log(groups)
 
 //   API LocationIQ
 //   API YELP maybe
@@ -115,19 +115,44 @@ var midPointLong = "";
         
         sumLong = sumLong + parseFloat(tempLong[i]);
         
-      var midLat = sumLat / tempLat.length;
+      midLat = sumLat / tempLat.length;
 
-      var midLong = sumLong / tempLong.length;
+      midLong = sumLong / tempLong.length;
       
       } 
       
-      console.log(sumLat);
-      console.log(sumLong);
+      console.log("midpoint Latitude");
       console.log(midLat);
+      console.log("midpoint Longitude");
       console.log(midLong);
+
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://us1.locationiq.com/v1/reverse.php?key=965e216b522057&lat=" + midLat + "&lon=" + midLong + "&format=json",
+        "method": "GET"
+      }
       
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+        console.log(response.address.city)
+        console.log(response.address.state)
+        var place = $("<span style='float:right; padding: 0 10% 0 0'><h4>" + response.address.city + ", " + response.address.state + "</h4></span>");
+        $("#search-form").append(place);
+      });
+      
+      $("#googleMap").empty();
+
+      var a = $("<img src='https://maps.locationiq.com/v2/staticmap?key=965e216b522057&center=" + midLat + "," + midLong +"&zoom=12&size=1190x400&format=<format>&maptype=<MapType>&markers=icon:large-blue-cutout|" + midLat + "," + midLong + "&markers=icon:<icon>|<latitude>,<longitude>'>")
+  
+      $("#googleMap").append(a);
+
     }, 1000);
+
+    
   }
+
+  ;
 
   function runYelpApi() {
     //   use yelp api (or other one) with calculated midpoint geolocation
@@ -150,8 +175,7 @@ function buildQueryUrl_Loc() {
   
   function myLoop (i) {          
     setTimeout(function () {   
-  // for (var i=0; i < tempLocations.length; i++) {
-    // setTimeout(function() {
+
     var located = tempLocations[i-1]
 
     var mykey = "965e216b522057"
@@ -252,21 +276,22 @@ function buildQueryUrl_Loc() {
     if (settings.length === tempLocations.length) {
 
       calculateMidPoint();
-
+    
     }
     }, 1000)
-    // calculateMidPoint();
+    
   };
   
 myLoop(tempLocations.length)
 
-// calculateMidPoint();
+
 }
 
 buildQueryUrl_Loc();
-// calculateMidPoint();
+
 console.log(tempLat);
 console.log(tempLong);
+
 
 // will build the YELP ajax GET when needed with geomidpoint as start
 // and the value of the search input as the search?term="what your searching here"
