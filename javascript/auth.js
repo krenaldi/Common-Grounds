@@ -27,7 +27,9 @@ registerForm.addEventListener('submit', (e) => {
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         return db.ref('users/' + cred.user.uid).set({
-            displayname: registerForm['displayName'].value
+            displayname: registerForm['displayName'].value,
+            city: registerForm['city'].value,
+            state: registerForm['reg-state'].value
         });
     }).then(() => {
         // reset form

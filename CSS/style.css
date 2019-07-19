@@ -5,7 +5,8 @@
 
 #lg-start,
 #lg-log,
-#lg-reg{
+#lg-reg,
+#lg-submit{
    background-color: #3399CC;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    letter-spacing: 2px;
@@ -16,6 +17,9 @@
    width:200px;
 }
 
+.form-group {
+   margin-bottom: 0px;
+}
 
 .nav-link{
    color:  #CDB99C;;
@@ -28,17 +32,12 @@ color:  #330000;
 }
 
 
-/* .nav-item:active {
-   color: #808080;
-} */
-
 #navbarNav{
    margin-left: 100px;
 }
 
 #nav-login,
 #nav-register{
-   margin-right: 50px;
    font-weight: bold;
    color: #CDB99C;
 
@@ -114,12 +113,12 @@ margin-right: 20px;
 }
 
 
-#log-txt,
+/* #log-txt,
 #reg-txt{
    text-align: center;
    margin-bottom: 10px;
    
-}
+} */
 
 
 #lg-start{
@@ -129,17 +128,27 @@ margin-right: 20px;
 }
 
 
-button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover{
+button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submit:hover{
    background-color:rgb(15, 92, 131);
    border-color: 1px solid #3399CC;
    font-style: oblique;
 
 }
 
+<<<<<<< HEAD
 .form-group{
    margin: -10px;
 }
 
+=======
+
+#contact-wrapper{
+   margin-top:20px;
+}
+
+
+
+>>>>>>> 3a5f431c006c6f1dcfd626a9c1d2eb49ab56632e
  /* this line of code is temporary*/
 #coming-soon{
    height: 300px;
@@ -290,6 +299,7 @@ hr{
    float: center;
 }
 
+<<<<<<< HEAD
 /*Group-page css sstart here */
 .contianer-fulid{
    align-items: center;
@@ -331,3 +341,31 @@ margin: 5px 5px;
    background-color: #3399CC;
    color: #CDB99C;
 }
+=======
+
+#reg-city{
+   margin-left: -4.5px;
+   margin-right: 0px;
+   width: 85%;
+}
+
+
+#reg-state{
+   height: 38px;
+   margin-top: 24px; 
+   background-color:#fff;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #495057;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   border-radius: .25rem;
+   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   width: 15%;
+   margin-right:0;
+   margin-left: 3px;
+
+}
+>>>>>>> 3a5f431c006c6f1dcfd626a9c1d2eb49ab56632e
