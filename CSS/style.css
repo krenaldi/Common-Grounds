@@ -16,7 +16,16 @@
    display:block;
    width:200px;
 }
+/*main page start button with responsive*/
+#lg-start{
+   font-size:0.875em;
+   display:block;
+   left:-60px;
+   margin-top:35px;
+   margin-bottom: 70px;
+   width:100%;
 
+}
 .form-group {
    margin-bottom: 0px;
 }
@@ -52,8 +61,6 @@ color:  #330000;
    color: #330000;
 }
 
-
-
 #logo{
    margin-left: 50px;
 }
@@ -70,8 +77,6 @@ color:  #330000;
    color: #330000ab;
 }
 
-
-
 #test-right,
 #test-left{
    width: 50%;
@@ -79,23 +84,6 @@ color:  #330000;
    bottom: 10px;
    left: 25%;
 }
-
-
-
-p{
-   text-align: justify;
-   padding: 5px;
-   margin: 15px;
-   color: #330000;
-}
-
-
-#about-img{
-   padding: 5px;
-   margin:15px;
-}
-
-
 #modal-or{
    margin:0 auto;
    display:block;
@@ -111,16 +99,6 @@ margin-right: 20px;
    color:#666666;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-
-/* #log-txt,
-#reg-txt{
-   text-align: center;
-   margin-bottom: 10px;
-   
-} */
-
-
 #lg-start{
    width: 20%;
    padding: 15px;
@@ -135,37 +113,67 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
 
 }
 
-<<<<<<< HEAD
-.form-group{
-   margin: -10px;
-}
-
-=======
-
 #contact-wrapper{
    margin-top:20px;
 }
+/* Main page container*/
+.contianer-fulid-main{
+   align-items: center;
+   width: 95%;
+   height: auto;
+   padding: 5%;
+   margin: 2% 2% 2% 2%;
+   background: white;
+   color: #330000;
+   border: 1px solid #CDB99C;
+   border-radius: 5px;
+}
+/*Main page content*/
+p{
+   text-align: justify;
+   padding: 5px;
+   margin: 15px;
+   color: #330000;
+}
 
+/* style name common grounds in content */
 
+mark{
+   background-color: transparent;
+   color: #330000;
+   border-radius: 6px;
+   box-shadow: 0 0 10px 0 inset #CDB99C;
+}
 
->>>>>>> 3a5f431c006c6f1dcfd626a9c1d2eb49ab56632e
- /* this line of code is temporary*/
-#coming-soon{
-   height: 300px;
-   width: 300px;
-   margin: 40px 0 0 520px;
-
+/*Main-page-img*/
+#about-img-1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+/* main page content*/
+.main-content{
+   align-items: center;
+   width: 95%;
+   height: auto;
+   padding: 5%;
+   margin: 2% 2% 2% 2%;
+   background: white;
+   color: #330000;
+   border: transparent;
 }
 
 
 /*About page css starts here */
+
 /* search div */
 .search{
    position: relative;
    margin-left: 1%;
    width: 98%;
    height: auto;
-   background-color: rgba(245, 241, 241, 0.514);
    margin-top: 1%;
    padding: 1%;
    border-radius: 3px;
@@ -200,7 +208,7 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
    color: #330000;
 
 }
-.col-sm-3:hover, .col-sm-8:hover{
+.col-sm-3:hover, .col-sm-8:hover, .contianer-fulid:hover{
    box-shadow: 0 0 2px 2px  #CDB99C;
 
 }
@@ -299,7 +307,6 @@ hr{
    float: center;
 }
 
-<<<<<<< HEAD
 /*Group-page css sstart here */
 .contianer-fulid{
    align-items: center;
@@ -312,60 +319,97 @@ hr{
    border: 1px solid #CDB99C;
    border-radius: 5px;
 }
-h2{
+h2, h5{
    text-align: center;
    color: #330000;
 }
-h2:hover {
+h2:hover, h5:hover {
    color: #CDB99C;
 }
 
 /*form starts here*/
-#label-group-name,#label-member-name {
-display: inline;
-margin: 5px 5px;
+
+#label-group-name,#label-member-name, #label-city, #label-state, #label-group-email,
+#label-user-name, #label-full-name, #label-profile-city, #label-profile-state, #label-profile-email {
+   display: inline-block;
+   width: 140px;
+   padding: 5px;
+   text-align: center;
 }
 
-#input-group-name, #input-member-name , #inputCity, #inputState, #label-group-email{
+#input-group-name, #input-member-name , #inputCity, #inputState,#input-group-email{
    margin: 5px 5px;
    width: 45%;
    display: block;
+   border: 1px solid #CDB99C;
+   border-radius: 5px;
+
+}
+#input-group-name:hover, #input-member-name:hover , #inputCity:hover, #inputState:hover, #input-group-email:hover,
+#input-user-name:hover, #input-full-name:hover, #input-profile-City:hover, #input-profile-State:hover, #input-profile-email:hover{
+ border: 1px solid #330000;
 }
 
-.form-control-page {
-   float: left;
+/* hr in group form */
+hr.style-one {
+   padding: 0;
+   border: none;
+   height: 1px;
+   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), #CDB99C, rgba(0,0,0,0));
+   text-align: center;
+   }
+/* add more group member */
+.group-add-more {
+   color:  #330000;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   letter-spacing: 2px;
+   align-items: center;
+}   
+
+.group-add-more:hover {
+   color: #330000;
+   font-size: 18px;
 }
- 
+ /*Button to create group*/
 .btn-primary-group{
-   margin: 1% 0 0 0;
+   align-items: center;
+   margin: 1% 0 0 15%;
    background-color: #3399CC;
    color: #CDB99C;
 }
-=======
-
-#reg-city{
-   margin-left: -4.5px;
-   margin-right: 0px;
-   width: 85%;
+/*Profile modal starts here */
+.modal-content-profile{
+   text-align: left;
+   padding: 5%;
+   margin: 0 0 0 0;
+   background-color: white;
+   color: #CDB99C;
 }
-
-
-#reg-state{
-   height: 38px;
-   margin-top: 24px; 
-   background-color:#fff;
-   font-size: 1rem;
-   font-weight: 400;
-   line-height: 1.5;
-   color: #495057;
-   background-color: #fff;
-   background-clip: padding-box;
-   border: 1px solid #ced4da;
-   border-radius: .25rem;
-   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-   width: 15%;
-   margin-right:0;
-   margin-left: 3px;
-
+.modal-dialog.modal-lg{
+   border: 2px solid #CDB99C;
+   border-radius: 5px;
 }
->>>>>>> 3a5f431c006c6f1dcfd626a9c1d2eb49ab56632e
+.close-profile{
+   float: right;
+   padding: 0;
+   margin: 0;
+}
+.btn.btn-primary-profile{
+   color: #330000;
+   background-color: #3399CC;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   letter-spacing: 2px;
+   font-weight: bold;
+   border-color: rgb(15, 92, 131);
+   width: 20%;
+   font-size:0.875em;
+   display:block;
+   margin-left:40%;
+   margin-top:25px;
+   margin-bottom: 50px;
+}
+button#profile-btn:hover {
+   background-color:rgb(15, 92, 131);
+   border-color: 1px solid #3399CC;
+   font-style: oblique;
+}

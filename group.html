@@ -26,20 +26,14 @@
                 <h3 id="nav-login" class="d-inline-block align-top" alt="">
                     Find Friends </h3>
             </a>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">
                 <h3 id="nav-register" class="d-inline-block align-top" alt="">
                     Profile</h3>
             </a>
+
         </div>
 
     </nav>
-
-    <!-- Modal for Profile Starts here-->
-
-    <!-- code goes here -->
-
-        <!-- Modal for Profile Ends here-->
-
 
 <!-- Here start the div for the search bar -->
 <div class= "search">   
@@ -48,48 +42,127 @@
         <button type="submit"><i class="fa fa-search" id="btn-search"></i></button>   <!-- Id for search button -->
       </form></div>
       
-      <div class ="contianer-fulid">
+      <div class ="contianer-fulid-main">
 
         <h2>Create Group </h2>
         <hr>
         <form>
                 <div class="form-group-page">
-                        <label for="groupname" id ="label-group-name">Group Name</label>
 
+                       <div class="input-group"> 
+                        <label for="groupname" id ="label-group-name">Group Name</label>
                         <input type="group-name" 
                                class="form-control-page" 
                                id="input-group-name" 
-                               placeholder="Group Name">
-                        
+                               placeholder=" Group Name">
+                            </div>
+                            
+                        <div class="input-group">
                         <label for="membername"id ="label-member-name" >Member Name</label>
-
                         <input type="member-name" 
                                class="form-control-page" 
                                id="input-member-name" 
-                               placeholder="Member Name">
-                                                
+                               placeholder=" Member Name">
+                            </div>
+
+                        <div class="input-group">
+                        <label for="city"id ="label-city" >City </label>
                         <input type="city" 
                                class="form-control-page" 
                                id="inputCity" 
-                               placeholder="City">
+                               placeholder=" City">
+                            </div>
                         
+                        <div class="input-group">
+                        <label for="state"id ="label-state" >State </label>
                         <input type="state" 
                                class="form-control-page" 
                                id="inputState" 
-                               placeholder="State">
-                        
-                        <label for="exampleFormControlInput1" id ="label-group-email" >Member Email address</label>
-                        <input type="email" class="form-control-page" id="exampleFormControlInput1" placeholder="name@example.com"> 
-                        <br>
-                        
-                        
-                        <a class="nav-link" href="#" data-toggle="form-group-page" data-target=""> Add more member </a>
+                               placeholder=" State">
+                            </div>
+                               
+                        <div class="input-group">                        
+                        <label for="member-email" id ="label-group-email" >Member Email address</label>
+                        <input type="email" class="form-control-page" id="input-group-email" placeholder=" name@example.com">
+                        </div> 
+                        <hr class="style-one">
+
+                        <div class="input-group">                        
+                        <a class="group-add-more" href="#" data-toggle="form-group-page" data-target=""> Add more member </a>
+                    </div>
+                        <hr class="style-one">
 
                       
            <button type="submit" class="btn btn-primary-group">Create</button>
         </div>
           </form>
       </div>
+
+
+      <!-- modal for profile starts here -->
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content-profile">
+                <button type="button" class="close-profile" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                        <div class="modal-header-profile">
+                                <h5 class="modal-title-profile">Profile</h5>
+                        </div>
+                        <hr>
+                        <form>
+                                <div class="form-group-profile">
+                
+                                       <div class="input-profile"> 
+                                        <label for="username" id ="label-user-name">User Name</label>
+                                        <input type="user-name" 
+                                               class="form-control-profile" 
+                                               id="input-user-name" 
+                                               placeholder=" User Name">
+                                            </div>
+                                            
+                                        <div class="input-profile">
+                                        <label for="fullname"id ="label-full-name" >Full Name</label>
+                                        <input type="full-name" 
+                                               class="form-control-profile" 
+                                               id="input-full-name" 
+                                               placeholder=" Full Name">
+                                            </div>
+                
+                                        <div class="input-profile">
+                                        <label for="city"id ="label-profile-city" >City </label>
+                                        <input type="city" 
+                                               class="form-control-profile" 
+                                               id="input-profile-City" 
+                                               placeholder=" City">
+                                            </div>
+                                        
+                                        <div class="input-profile">
+                                        <label for="state"id ="label-profile-state" >State </label>
+                                        <input type="state" 
+                                               class="form-control-profile" 
+                                               id="input-profile-State" 
+                                               placeholder=" State">
+                                            </div>
+                                               
+                                        <div class="input-profile">                        
+                                        <label for="profile-email" id ="label-profile-email" >Your Email address</label>
+                                        <input type="email" class="form-control-profile" id="input-profile-email" placeholder=" name@example.com">
+                                        </div> 
+                                        <hr class="style-one">                
+                                      
+                           <button type="submit" class="btn btn-primary-profile" id="profile-btn">Create</button>
+                        </div>
+                          </form>
+             </div>
+        </div>
+      </div>
+
+        <!-- Modal for Profile Ends here-->
+
+        
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
