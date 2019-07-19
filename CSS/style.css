@@ -18,6 +18,9 @@
    width:200px;
 }
 
+.form-group {
+   margin-bottom: 0px;
+}
 
 .nav-link{
    color:  #CDB99C;;
@@ -30,17 +33,12 @@ color:  #330000;
 }
 
 
-/* .nav-item:active {
-   color: #808080;
-} */
-
 #navbarNav{
    margin-left: 100px;
 }
 
 #nav-login,
 #nav-register{
-   margin-right: 50px;
    font-weight: bold;
    color: #CDB99C;
 
@@ -116,12 +114,12 @@ margin-right: 20px;
 }
 
 
-#log-txt,
+/* #log-txt,
 #reg-txt{
    text-align: center;
    margin-bottom: 10px;
    
-}
+} */
 
 
 #lg-start{

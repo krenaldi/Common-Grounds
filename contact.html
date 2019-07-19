@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <title>Common Grounds</title>
 </head>
 
 <body>
-
-
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.html">
             <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
@@ -27,28 +24,201 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" id="about-topnav">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" id="">About <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="login-topnav">Log In</a>
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="#" id="">Profile</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="register-topnav">Register</a>
+                <li class="nav-item logged-in" style="display: none;">
+                    <a class="nav-link" href="#" id="logout">Log Out</a>
+                </li>
+                <li class="nav-item logged-out" style="display: none;">
+                    <a class="nav-link" href="#" id="">Log In</a>
+                </li>
+                <li class="nav-item logged-out" style="display: none;">
+                    <a class="nav-link" href="#" id="">Register</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <div class="container-fluid"></div>
+    <div class="row">
 
 
-   
+        <!-- empty column 1-->
+        <div class="col-md-1"></div>
 
 
+        <!-- LEFT CONTACT -->
+        <div class="col-md-5">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
 
 
+        <!-- about copy -->
+        <div class="col-md-5" id="modal-log">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend, metus ac sagittis
+                aliquam, libero turpis ullamcorper dui, non tempor neque odio eget ipsum. Nam euismod dui ex, a
+                condimentum est ultricies nec. Maecenas ut porttitor turpis. Vivamus mollis diam augue, ac mollis
+                augue posuere non. Pellentesque vehicula risus libero, vel congue leo luctus nec. Integer vitae
+                facilisis eros, sed tincidunt urna. Cras venenatis convallis ante, nec volutpat nisl luctus ut.
+            </p>
+
+            <p>
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
+                fringilla magna sit amet mattis viverra. In porttitor est ut tristique gravida. Proin et elit ut
+                lectus consectetur rutrum. Vivamus justo urna, tempor sed turpis et, iaculis ultricies diam. Aenean
+                porttitor, neque id accumsan fringilla, quam metus ornare velit, eu venenatis sem felis at lacus.
+                Nullam non libero eu libero convallis aliquam. Vivamus ultrices augue ac hendrerit pellentesque.
+            </p>
+
+        </div>
+
+
+        <!-- empty column 2-->
+        <div class="col-md-1"></div>
+
+    </div>
+
+  
+
+
+    <!-- GET STARTED button -->
+    <button type="button" class="btn btn-primary" id="lg-start" data-toggle="modal" data-target="#modal">
+        GET STARTED
+    </button>
+
+    <!-- GET STARTED trigger modal -->
+    <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">GET STARTED</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <!-- LOG IN form -->
+                            <div class="col-md-5" id="modal-log">
+                                <form id="login-form">
+                                    <div class="form-group">
+                                        <label for="log-email"></label>
+                                        <input type="email" class="form-control" id="login-email"
+                                            aria-describedby="emailHelp" placeholder="Email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="login-password"></label>
+                                        <input type="password" class="form-control" id="login-password"
+                                            placeholder="Password">
+                                    </div>
+
+                                    <!-- LOG IN button -->
+                                    <div id="test-left">
+                                        <div id="log-txt">
+                                            Already have an account?
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" id="lg-log">LOG IN</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+
+                            <!-- or image -->
+                            <div class="col-md-2">
+                                <img src="images/or.jpg" id="modal-or" class="img-fluid" alt="or">
+                            </div>
+
+
+                            <!-- REGISTER form -->
+                            <div class="col-md-5" id="modal-log">
+                                <form id="register-form">
+                                    <div class="form-group">
+                                        <label for="displayname"></label>
+                                        <input type="text" class="form-control" id="displayName" placeholder="Display Name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="reg-email"></label>
+                                        <input type="email" class="form-control" id="reg-email"
+                                            aria-describedby="emailHelp" placeholder="Email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="reg-password"></label>
+                                        <input type="password" class="form-control" id="reg-password"
+                                            placeholder="Password">
+                                    </div>
+
+                                    <!-- REGISTER button -->
+                                    <div id="test-right">
+                                        <div id="reg-txt">
+                                            Don't have an account?
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary" id="lg-reg">REGISTER</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyDzOo657WbxTVPI0EHtospqgHol0OrsGXU",
+            authDomain: "project-1-93353.firebaseapp.com",
+            databaseURL: "https://project-1-93353.firebaseio.com",
+            projectId: "project-1-93353",
+            storageBucket: "",
+            messagingSenderId: "667158939513",
+            appId: "1:667158939513:web:b9329b853bc61409"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // make auth and firestore references
+        var auth = firebase.auth();
+        var db = firebase.database();
+    </script>
+    <script type="text/javascript" src="javascript/auth.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
 </html>
