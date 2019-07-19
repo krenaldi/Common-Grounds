@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" id="">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="about.html" id="">Find Places <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item logged-in" style="display: none;">
                     <a class="nav-link" href="#" id="">Profile</a>
@@ -33,14 +33,24 @@
                     <a class="nav-link" href="#" id="logout">Log Out</a>
                 </li>
                 <li class="nav-item logged-out" style="display: none;">
-                    <a class="nav-link" href="#" id="">Log In</a>
+                    <!-- <a class="nav-link" href="#" id="">Log In</a> -->
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modal">Log In</a>
+
                 </li>
                 <li class="nav-item logged-out" style="display: none;">
-                    <a class="nav-link" href="#" id="">Register</a>
+                    <!-- <a class="nav-link" href="#" id="">Register</a> -->
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modal">Register</a>
+                  
                 </li>
             </ul>
         </div>
     </nav>
+
+<!-- image sliding starts here-->
+    <div class="slider-holder">
+        <img src="images/main-page-pic.jpg" id="about-img-1" class="img-fluid" alt="group of people image">
+
+    </div>
 
     <div class="container-fluid"></div>
     <div class="row">
