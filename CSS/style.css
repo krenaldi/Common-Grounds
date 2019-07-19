@@ -92,8 +92,7 @@ p{
 
 
 #about-img{
-   padding: 5px;
-   margin:15px;
+   margin:15px 0 15px 0;
 }
 
 
@@ -112,15 +111,6 @@ margin-right: 20px;
    color:#666666;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-
-/* #log-txt,
-#reg-txt{
-   text-align: center;
-   margin-bottom: 10px;
-   
-} */
-
 
 #lg-start{
    width: 20%;
@@ -301,7 +291,7 @@ hr{
 
 #reg-state{
    height: 38px;
-   margin-top: 24px; 
+   margin-top: 15px; 
    background-color:#fff;
    font-size: 1rem;
    font-weight: 400;
@@ -314,6 +304,24 @@ hr{
    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
    width: 15%;
    margin-right:0;
-   margin-left: 3px;
+   margin-left: 4.5px;
+}
 
+
+#displayName,
+#city,
+#reg-email,
+#reg-password,
+#login-password{
+   margin-top: 15px;
+}
+
+#login-email{
+   margin-top: 70px;
+}
+
+h6{
+   text-align: center;
+   font-style: italic;
+   color: #3399CC;
 }
