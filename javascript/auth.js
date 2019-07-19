@@ -44,6 +44,8 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
+    // redirect user to homepage on logout
+    window.location.replace("index.html");
 });
 
 // login
