@@ -9,13 +9,13 @@ const setupUI = (user) => {
         const html = `
             <div>Logged in as ${user.email}</div>        
         `;
-        //profileDetails.innerHTML = html;
+        profileDetails.innerHTML = html;
         // toggle UI elements
         loggedInLinks.forEach(item => item.style.display = 'block');
         loggedOutLinks.forEach(item => item.style.display = 'none');
     } else {
         // hide profile details
-        //profileDetails.innerHTML = '';
+        profileDetails.innerHTML = '';
         // toggle UI elements
         loggedInLinks.forEach(item => item.style.display = 'none');
         loggedOutLinks.forEach(item => item.style.display = 'block');
