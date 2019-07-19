@@ -113,8 +113,25 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
 
 }
 
+.modal-title-profile,
+.profile-details {
+   color: #000000;
+   text-align: center;
+}
+
 #contact-wrapper{
    margin-top:20px;
+}
+
+input#city {
+   width: 75%;
+}
+
+select#reg-state {
+   float: right;
+   margin-top: -38px;
+   position: relative;
+   height: 40px;
 }
 /* Main page container*/
 .contianer-fulid-main{
@@ -329,6 +346,7 @@ h2:hover, h5:hover {
 
 /*form starts here*/
 
+
 #label-group-name,#label-member-name, #label-city, #label-state, #label-group-email,
 #label-user-name, #label-full-name, #label-profile-city, #label-profile-state, #label-profile-email {
    display: inline-block;
@@ -337,13 +355,13 @@ h2:hover, h5:hover {
    text-align: center;
 }
 
-#input-group-name, #input-member-name , #inputCity, #inputState,#input-group-email{
+#groupname, #membername, #membercity, #memberstate, #memberemail {
    margin: 5px 5px;
    width: 45%;
    display: block;
    border: 1px solid #CDB99C;
    border-radius: 5px;
-
+   padding: 5px;
 }
 #input-group-name:hover, #input-member-name:hover , #inputCity:hover, #inputState:hover, #input-group-email:hover,
 #input-user-name:hover, #input-full-name:hover, #input-profile-City:hover, #input-profile-State:hover, #input-profile-email:hover{
@@ -362,8 +380,8 @@ hr.style-one {
 .group-add-more {
    color:  #330000;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   letter-spacing: 2px;
    align-items: center;
+   font-weight: bold;
 }   
 
 .group-add-more:hover {

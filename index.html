@@ -30,18 +30,19 @@
                     <a class="nav-link" href="group.html" id="">Create Group</a>
                 </li>
                 <li class="nav-item logged-in" style="display: none;">
-                    <a class="nav-link" href="#" id="" data-toggle="modal" data-target=".bd-example-modal-lg">Profile</a>
+                    <a class="nav-link" href="#" id="" data-toggle="modal"
+                        data-target=".bd-example-modal-lg">Profile</a>
                 </li>
                 <li class="nav-item logged-in" style="display: none;">
                     <a class="nav-link" href="#" id="logout">Log Out</a>
                 </li>
-                <li class="nav-item logged-out" style="display: none;">    
+                <li class="nav-item logged-out" style="display: none;">
                     <a class="nav-link" href="#" data-toggle="modal" data-target="#modal">Log In</a>
 
                 </li>
                 <li class="nav-item logged-out" style="display: none;">
                     <a class="nav-link" href="#" data-toggle="modal" data-target="#modal">Register</a>
-                  
+
                 </li>
             </ul>
         </div>
@@ -49,33 +50,58 @@
 
     <div class="container-fluid-main">
         <!-- image starts here-->
-    <div class="index-img">
+        <div class="index-img">
 
             <img src="images/Hangout-Places.jpg" id="about-img-1" class="img-fluid" alt="group of people image">
-    
+
         </div>
         <div class="main-content">
-                 <p>
-                    <mark>Common Grounds </mark>is a great way to discover places you won't find in the guidebooks, most of us enjoy Netflix on the couch. However,
-                    you're not going to meet anyone new from sitting in your apartment. Going to coffee with someone ~once~ is probably not going to 
-                    cement a lifelong friendship neither you finish up your whole new project that you are working together with colleagues. You would like to meet more
-                    often to collabrate, maybe for work or just to spend time with your loved one's. </p> 
-                    <p> If you're looking for something real, commit! Plan bi-monthly brunch hangouts, or wine Wednesday 
-                    get-togethers the first of every month. Make friends while making the world a better place or strengthen your BFF, then<mark> Common Grounds </mark>
-                    is for you.</p> 
+            <p>
+                <mark>Common Grounds </mark>is a great way to discover places you won't find in the guidebooks, most of
+                us enjoy Netflix on the couch. However,
+                you're not going to meet anyone new from sitting in your apartment. Going to coffee with someone ~once~
+                is probably not going to
+                cement a lifelong friendship neither you finish up your whole new project that you are working together
+                with colleagues. You would like to meet more
+                often to collabrate, maybe for work or just to spend time with your loved one's. </p>
+            <p> If you're looking for something real, commit! Plan bi-monthly brunch hangouts, or wine Wednesday
+                get-togethers the first of every month. Make friends while making the world a better place or strengthen
+                your BFF, then<mark> Common Grounds </mark>
+                is for you.</p>
 
-                    <p>With<mark> Common Grounds </mark>you can create group, organize meet-up's with people who share your interests, whome you are working together 
-                    or simply hangout with your old buddies. Let's get started, create your account invite your friends and start making memories.</p>
-                    <br><hr class="style-one">
-      
+            <p>With<mark> Common Grounds </mark>you can create group, organize meet-up's with people who share your
+                interests, whome you are working together
+                or simply hangout with your old buddies. Let's get started, create your account invite your friends and
+                start making memories.</p>
+            <br>
+            <hr class="style-one">
+
+        </div>
+
+        <!-- modal for profile starts here -->
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content-profile">
+                    <button type="button" class="close-profile" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-header-profile">
+                        <h3 class="modal-title-profile">Profile</h3>
+                    </div>
+                    <hr>
+                    <div class="profile-details"></div>
                 </div>
+            </div>
+        </div>
 
-
-    <!-- GET STARTED button -->
-    <button type="button" class="btn btn-primary" id="lg-start" data-toggle="modal" data-target="#modal">
-        GET STARTED
-    </button>
-</div>
+        <!-- Modal for Profile Ends here-->
+        <!-- GET STARTED button -->
+        <button type="button" class="btn btn-primary" id="lg-start" data-toggle="modal" data-target="#modal">
+            GET STARTED
+        </button>
+    </div>
 
 
     <!-- GET STARTED trigger modal -->
@@ -96,7 +122,8 @@
                             <div class="col-md-5" id="modal-log">
                                 <form id="login-form">
                                     <div class="form-group">
-                                        <label for="log-email" style="color: #495057; font-weight: bold;" >Already have an account?</label>
+                                        <label for="log-email" style="color: #495057; font-weight: bold;">Already have
+                                            an account?</label>
                                         <input type="email" class="form-control" id="login-email"
                                             aria-describedby="emailHelp" placeholder="Email">
                                     </div>
@@ -127,77 +154,76 @@
                             <div class="col-md-5 rform" id="modal-log">
                                 <form id="register-form">
                                     <div class="form-group">
-                                        <label for="displayname" style="color: #495057; font-weight: bold;">Don't have an account?</label>
+                                        <label for="displayname" style="color: #495057; font-weight: bold;">Don't have
+                                            an account?</label>
                                         <input type="text" class="form-control" id="displayName"
                                             placeholder="Display Name">
                                     </div>
 
 
                                     <div class="row">
-                                        
-                                        
+
+
                                         <div class="form-group container-fluid p-0" id="reg-city">
                                             <label for="city"></label>
                                             <input type="text" class="form-control" id="city" placeholder="City">
-                                        </div>
+                                    
+                                        <select id="reg-state">
+                                            <option value="AL">AL</option>
+                                            <option value="AK">AK</option>
+                                            <option value="AR">AR</option>
+                                            <option value="AZ">AZ</option>
+                                            <option value="CA">CA</option>
+                                            <option value="CO">CO</option>
+                                            <option value="CT">CT</option>
+                                            <option value="DC">DC</option>
+                                            <option value="DE">DE</option>
+                                            <option value="FL">FL</option>
+                                            <option value="GA">GA</option>
+                                            <option value="HI">HI</option>
+                                            <option value="IA">IA</option>
+                                            <option value="ID">ID</option>
+                                            <option value="IL">IL</option>
+                                            <option value="IN">IN</option>
+                                            <option value="KS">KS</option>
+                                            <option value="KY">KY</option>
+                                            <option value="LA">LA</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MD">MD</option>
+                                            <option value="ME">ME</option>
+                                            <option value="MI">MI</option>
+                                            <option value="MN">MN</option>
+                                            <option value="MO">MO</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MT">MT</option>
+                                            <option value="NC">NC</option>
+                                            <option value="NE">NE</option>
+                                            <option value="NH">NH</option>
+                                            <option value="NJ">NJ</option>
+                                            <option value="NM">NM</option>
+                                            <option value="NV">NV</option>
+                                            <option value="NY">NY</option>
+                                            <option value="ND">ND</option>
+                                            <option value="OH">OH</option>
+                                            <option value="OK">OK</option>
+                                            <option value="OR">OR</option>
+                                            <option value="PA">PA</option>
+                                            <option value="RI">RI</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SD">SD</option>
+                                            <option value="TN">TN</option>
+                                            <option value="TX">TX</option>
+                                            <option value="UT">UT</option>
+                                            <option value="VT">VT</option>
+                                            <option value="VA">VA</option>
+                                            <option value="WA">WA</option>
+                                            <option value="WI">WI</option>
+                                            <option value="WV">WV</option>
+                                            <option value="WY">WY</option>
+                                        </select>
+                                        </div>    
 
-
-                                            <select id="reg-state" >
-                                                    <option value="AL">AL</option>
-                                                    <option value="AK">AK</option>
-                                                    <option value="AR">AR</option>
-                                                    <option value="AZ">AZ</option>
-                                                    <option value="CA">CA</option>
-                                                    <option value="CO">CO</option>
-                                                    <option value="CT">CT</option>
-                                                    <option value="DC">DC</option>
-                                                    <option value="DE">DE</option>
-                                                    <option value="FL">FL</option>
-                                                    <option value="GA">GA</option>
-                                                    <option value="HI">HI</option>
-                                                    <option value="IA">IA</option>
-                                                    <option value="ID">ID</option>
-                                                    <option value="IL">IL</option>
-                                                    <option value="IN">IN</option>
-                                                    <option value="KS">KS</option>
-                                                    <option value="KY">KY</option>
-                                                    <option value="LA">LA</option>
-                                                    <option value="MA">MA</option>
-                                                    <option value="MD">MD</option>
-                                                    <option value="ME">ME</option>
-                                                    <option value="MI">MI</option>
-                                                    <option value="MN">MN</option>
-                                                    <option value="MO">MO</option>
-                                                    <option value="MS">MS</option>
-                                                    <option value="MT">MT</option>
-                                                    <option value="NC">NC</option>
-                                                    <option value="NE">NE</option>
-                                                    <option value="NH">NH</option>
-                                                    <option value="NJ">NJ</option>
-                                                    <option value="NM">NM</option>
-                                                    <option value="NV">NV</option>
-                                                    <option value="NY">NY</option>
-                                                    <option value="ND">ND</option>
-                                                    <option value="OH">OH</option>
-                                                    <option value="OK">OK</option>
-                                                    <option value="OR">OR</option>
-                                                    <option value="PA">PA</option>
-                                                    <option value="RI">RI</option>
-                                                    <option value="SC">SC</option>
-                                                    <option value="SD">SD</option>
-                                                    <option value="TN">TN</option>
-                                                    <option value="TX">TX</option>
-                                                    <option value="UT">UT</option>
-                                                    <option value="VT">VT</option>
-                                                    <option value="VA">VA</option>
-                                                    <option value="WA">WA</option>
-                                                    <option value="WI">WI</option>
-                                                    <option value="WV">WV</option>
-                                                    <option value="WY">WY</option>
-                                                </select>
-            
-            
-                                  </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="reg-email"></label>
@@ -211,13 +237,10 @@
                                         <input type="password" class="form-control" id="reg-password"
                                             placeholder="Password">
                                     </div>
-
-
                                     <!-- REGISTER button -->
                                     <div id="test-right">
-                                        
-
                                         <button type="submit" class="btn btn-primary" id="lg-reg">REGISTER</button>
+                                        
                                     </div>
                                 </form>
                             </div>

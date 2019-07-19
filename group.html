@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <title>Common Grounds</title>
@@ -28,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item logged-in" style="display: none;">
-                    <a class="nav-link" href="search.html" id="">Find Places</a>
+                    <a class="nav-link" href="search.html" id="places">Find Places</a>
                 </li>
                 <li class="nav-item logged-in" style="display: none;">
                     <a class="nav-link" href="group.html" id="">Create Group</a>
@@ -71,34 +70,34 @@
 
                 <div class="input-group">
                     <label for="groupname" id="label-group-name">Group Name</label>
-                    <input type="group-name" class="form-control-page" id="input-group-name" placeholder=" Group Name">
+                    <input type="text" class="form-control-page" id="groupname" placeholder="Group Name">
                 </div>
 
                 <div class="input-group">
                     <label for="membername" id="label-member-name">Member Name</label>
-                    <input type="member-name" class="form-control-page" id="input-member-name"
-                        placeholder=" Member Name">
+                    <input type="text" class="form-control-page" id="membername"
+                        placeholder="Member Name">
                 </div>
 
                 <div class="input-group">
                     <label for="city" id="label-city">City </label>
-                    <input type="city" class="form-control-page" id="inputCity" placeholder=" City">
+                    <input type="text" class="form-control-page" id="membercity" placeholder=" City">
                 </div>
 
                 <div class="input-group">
                     <label for="state" id="label-state">State </label>
-                    <input type="state" class="form-control-page" id="inputState" placeholder=" State">
+                    <input type="text" class="form-control-page" id="memberstate" placeholder=" State">
                 </div>
 
                 <div class="input-group">
-                    <label for="member-email" id="label-group-email">Member Email address</label>
-                    <input type="email" class="form-control-page" id="input-group-email"
+                    <label for="member-email" id="label-group-email">Member Email</label>
+                    <input type="email" class="form-control-page" id="memberemail"
                         placeholder=" name@example.com">
                 </div>
                 <hr class="style-one">
 
                 <div class="input-group">
-                    <a class="group-add-more" href="#" data-toggle="form-group-page" data-target=""> Add more member
+                    <a class="group-add-more" href="#" data-toggle="form-group-page" data-target=""> Add more members
                     </a>
                 </div>
                 <hr class="style-one">
@@ -120,7 +119,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-header-profile">
-                    <h5 class="modal-title-profile">Profile</h5>
+                    <h3 class="modal-title-profile">Profile</h3>
                 </div>
                 <hr>
                 <div class="profile-details"></div>
@@ -129,6 +128,159 @@
     </div>
 
     <!-- Modal for Profile Ends here-->
+
+    <!-- GET STARTED trigger modal -->
+    <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">GET STARTED</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+    
+                                <!-- LOG IN form -->
+                                <div class="col-md-5" id="modal-log">
+                                    <form id="login-form">
+                                        <div class="form-group">
+                                            <label for="log-email" style="color: #495057; font-weight: bold;">Already have
+                                                an account?</label>
+                                            <input type="email" class="form-control" id="login-email"
+                                                aria-describedby="emailHelp" placeholder="Email">
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label for="login-password"></label>
+                                            <input type="password" class="form-control" id="login-password"
+                                                placeholder="Password">
+                                        </div>
+    
+                                        <!-- LOG IN button -->
+                                        <div id="test-left">
+                                            <button type="submit" class="btn btn-primary" id="lg-log">LOG IN</button>
+                                        </div>
+    
+                                    </form>
+    
+                                </div>
+    
+    
+                                <!-- or image -->
+                                <div class="col-md-2">
+                                    <img src="images/or.jpg" id="modal-or" class="img-fluid" alt="or">
+                                </div>
+    
+    
+                                <!-- REGISTER form -->
+                                <div class="col-md-5 rform" id="modal-log">
+                                    <form id="register-form">
+                                        <div class="form-group">
+                                            <label for="displayname" style="color: #495057; font-weight: bold;">Don't have
+                                                an account?</label>
+                                            <input type="text" class="form-control" id="displayName"
+                                                placeholder="Display Name">
+                                        </div>
+    
+    
+                                        <div class="row">
+    
+    
+                                            <div class="form-group container-fluid p-0" id="reg-city">
+                                                <label for="city"></label>
+                                                <input type="text" class="form-control" id="city" placeholder="City">
+                                            </div>
+                                            <select id="reg-state">
+                                                <option value="AL">AL</option>
+                                                <option value="AK">AK</option>
+                                                <option value="AR">AR</option>
+                                                <option value="AZ">AZ</option>
+                                                <option value="CA">CA</option>
+                                                <option value="CO">CO</option>
+                                                <option value="CT">CT</option>
+                                                <option value="DC">DC</option>
+                                                <option value="DE">DE</option>
+                                                <option value="FL">FL</option>
+                                                <option value="GA">GA</option>
+                                                <option value="HI">HI</option>
+                                                <option value="IA">IA</option>
+                                                <option value="ID">ID</option>
+                                                <option value="IL">IL</option>
+                                                <option value="IN">IN</option>
+                                                <option value="KS">KS</option>
+                                                <option value="KY">KY</option>
+                                                <option value="LA">LA</option>
+                                                <option value="MA">MA</option>
+                                                <option value="MD">MD</option>
+                                                <option value="ME">ME</option>
+                                                <option value="MI">MI</option>
+                                                <option value="MN">MN</option>
+                                                <option value="MO">MO</option>
+                                                <option value="MS">MS</option>
+                                                <option value="MT">MT</option>
+                                                <option value="NC">NC</option>
+                                                <option value="NE">NE</option>
+                                                <option value="NH">NH</option>
+                                                <option value="NJ">NJ</option>
+                                                <option value="NM">NM</option>
+                                                <option value="NV">NV</option>
+                                                <option value="NY">NY</option>
+                                                <option value="ND">ND</option>
+                                                <option value="OH">OH</option>
+                                                <option value="OK">OK</option>
+                                                <option value="OR">OR</option>
+                                                <option value="PA">PA</option>
+                                                <option value="RI">RI</option>
+                                                <option value="SC">SC</option>
+                                                <option value="SD">SD</option>
+                                                <option value="TN">TN</option>
+                                                <option value="TX">TX</option>
+                                                <option value="UT">UT</option>
+                                                <option value="VT">VT</option>
+                                                <option value="VA">VA</option>
+                                                <option value="WA">WA</option>
+                                                <option value="WI">WI</option>
+                                                <option value="WV">WV</option>
+                                                <option value="WY">WY</option>
+                                            </select>
+    
+    
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label for="reg-email"></label>
+                                            <input type="email" class="form-control" id="reg-email"
+                                                aria-describedby="emailHelp" placeholder="Email">
+                                        </div>
+    
+    
+                                        <div class="form-group">
+                                            <label for="reg-password"></label>
+                                            <input type="password" class="form-control" id="reg-password"
+                                                placeholder="Password">
+                                        </div>
+    
+    
+                                        <!-- REGISTER button -->
+                                        <div id="test-right">
+    
+    
+                                            <button type="submit" class="btn btn-primary" id="lg-reg">REGISTER</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
