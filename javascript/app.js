@@ -143,10 +143,45 @@ var midLong = 0;
       
       $("#googleMap").empty();
 
-      var a = $("<img src='https://maps.locationiq.com/v2/staticmap?key=965e216b522057&center=" + midLat + "," + midLong +"&zoom=12&size=1190x400&format=<format>&maptype=<MapType>&markers=icon:large-blue-cutout|" + midLat + "," + midLong + "&markers=icon:<icon>|<latitude>,<longitude>'>")
+      var a = $("<img src='https://maps.locationiq.com/v2/staticmap?key=965e216b522057&center=" + midLat + "," + midLong +"&zoom=12&size=790x398&format=<format>&maptype=<MapType>&markers=icon:large-blue-cutout|" + midLat + "," + midLong + "&markers=icon:<icon>|<latitude>,<longitude>'>")
   
       $("#googleMap").append(a);
 
+      var zomato = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://developers.zomato.com/api/v2.1/geocode?&lat="+ midLat +"&lon="+midLong +"&apikey=d7db74dd4486cb039f810541d694f67d&count=5&format=json",
+        "method": "GET"
+      }
+
+      $.ajax(zomato).done(function(salty){
+        console.log(salty)
+        var results = salty.nearby_restaurants
+        console.log(results)
+
+        for (var i=0; i<results.length;i++){
+          var resDiv = $("<div class='res'>")
+          var resName = results[i].restaurant.name
+          var resCur = results[i].restaurant.currency
+          var rate = results[i].restaurant.user_rating.aggregate_rating
+          var adr = results[i].restaurant.location.address
+          var type = results[i].restaurant.cuisines
+
+          var head = $("<h5>").text(resName)
+          var head2 = $("<p>").text(" Price: " + resCur + " , "+  " Rating: " + rate + "/5")
+          var p = $("<p>").text(" Address: " + adr)
+          var p1 = $("<p>").text(" Cuisine Type: " + type)
+          
+          resDiv.append(head);
+          resDiv.append(head2);
+          resDiv.append(p);
+          resDiv.append(p1);
+          resDiv.append("<hr>");
+
+          $(".place-results").append(resDiv);
+        }
+        
+      });
     }, 1000);
 
     
