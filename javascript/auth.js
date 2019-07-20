@@ -16,6 +16,8 @@ auth.onAuthStateChanged(user => {
     }
 });
 
+
+
 // signup
 const registerForm = document.querySelector('#register-form');
 registerForm.addEventListener('submit', (e) => {
@@ -36,6 +38,8 @@ registerForm.addEventListener('submit', (e) => {
         registerForm.reset();
         // close modal
         closeRegModal();
+        // redirect user to create group page
+        window.location.replace("group.html");
     });
 });
 
@@ -61,7 +65,10 @@ loginForm.addEventListener('submit', (e) => {
         //console.log(cred.user);
         // reset form
         loginForm.reset();
+        // close modal
+        closeLogModal();
+        // redirect user to search page
+        window.location.replace("search.html");
     });
-    // close modal
-    closeLogModal();
+
 });
