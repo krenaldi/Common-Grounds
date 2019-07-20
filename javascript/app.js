@@ -174,10 +174,14 @@ db.ref().on("value", function(snapshot) {
   
       $("#googleMap").append(a);
 
+      var b = $("<h2>").text("Nearby Restaurants")
+      $(".search-result").prepend(b)
+      $("search-result").prepend($("<hr>"))
+
       var zomato = {
         "async": true,
         "crossDomain": true,
-        "url": "https://developers.zomato.com/api/v2.1/geocode?&lat="+ midLat +"&lon="+midLong +"&apikey=d7db74dd4486cb039f810541d694f67d&count=5&format=json",
+        "url": "https://developers.zomato.com/api/v2.1/geocode?&lat="+ midLat +"&lon="+ midLong +"&apikey=d7db74dd4486cb039f810541d694f67d&count=5&format=json",
         "method": "GET"
       }
 
