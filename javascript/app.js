@@ -22,6 +22,8 @@ var users = {
     
 }
 
+var usersArray = []
+
 var groups = {
   // Where the groups will be dumped from firebase.
     LittleRascals: ["Angela", "Tom", "Bob"]
@@ -51,29 +53,50 @@ var midLong = 0;
 // Will allow for each user to read the stored data
 // on firebase and use it to run the program.
 
-// database.ref().on("value", function(snapshot) {
+db.ref().on("value", function(snapshot) {
 
-//    for ( var i = 0; i < users.length; i++) {
+  //  for ( var i = 0; i < snapshot.val().users; i++) {
 
-//      users = snapshot.val().users
+    console.log(snapshot.val());
 
-//    }
+    // console.log(snapshot.val().users)
+    // console.log(snapshot.val().users)
+    users = snapshot.val().users
+    // console.log(users["1Bn7mIDLFFMRS1sRgdES4ro4Kt32"])
+    // console.log(users["1Bn7mIDLFFMRS1sRgdES4ro4Kt32"].city)
+    for (var i in users) {
+      usersArray.push(users[i])
+      
+    }
+    console.log(usersArray);
+    console.log(usersArray[1].city);
+    console.log(usersArray[1].displayname)
+    acquireLocation()
+    buildQueryUrl_Loc();
+    $("#dynamic-chat").empty();
+    for (var i = 0; usersArray.length; i++) {
+      console.log(usersArray[i].displayname)
+      var name = $("<div id='chat-userName'>" + usersArray[i].displayname + "</div>");
+      $("#dynamic-chat").append(name);
+    }
 
-//    for ( var i = 0; i < groups.length; i++) {
+  //  }
 
-//     groups = snapshot.val().groups
+  //  for ( var i = 0; i < groups.length; i++) {
 
-//    }
+    // groups = snapshot.val().groups
 
-//    midLat = snapshot.val().midPointLat
+  //  }
 
-//    midLong = snapshot.val().midPointLong
+  //  midLat = snapshot.val().midPointLat
 
-// }, function(errorObject) {
+  //  midLong = snapshot.val().midPointLong
 
-//   console.log("The read failed: " + errorObject.code);
+}, function(errorObject) {
 
-// });
+  console.log("The read failed: " + errorObject.code);
+
+});
 // console.log(users)
 // console.log(groups)
 
@@ -89,15 +112,19 @@ var midLong = 0;
   // put acquireLocations(group) in parameter
   function acquireLocation(group) {
 
-      for (i = 0; i < groups.LittleRascals.length; i++) {
+      // for (i = 0; i < groups.LittleRascals.length; i++) 
+      for (var i = 0; i < usersArray.length; i++) {
+        var location = usersArray[i].city  + " " + usersArray[i].state
 
-        tempLocations.push(users[groups.LittleRascals[i]][1]);
+        console.log(location)
+
+        tempLocations.push(location);
 
     }  
 
   }
 
-  acquireLocation()
+  // acquireLocation()
 
   console.log(tempLocations);
   
@@ -326,7 +353,7 @@ myLoop(tempLocations.length)
 
 }
 
-buildQueryUrl_Loc();
+// buildQueryUrl_Loc();
 
 console.log(tempLat);
 console.log(tempLong);

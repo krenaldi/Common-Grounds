@@ -15,7 +15,7 @@
 
 
     <!-- Image and text -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.html">
             <img src="images/LOGO-alt-3-2.gif" id="logo" width="50" height="50" class="d-inline-block align-top" alt="">
             Common Grounds
@@ -65,14 +65,16 @@
 
         <h2>Create Group </h2>
         <hr>
-        <form>
+        <form id="create-members">
             <div class="form-group-page">
 
                 <div class="input-group">
                     <label for="groupname" id="label-group-name">Group Name</label>
                     <input type="text" class="form-control-page" id="groupname" placeholder="Group Name">
                 </div>
-
+                <!-- <button type="submit" class="btn btn-primary-group">Add Group Name</button> -->
+        <!-- </form>
+        <form id="create-members">         -->
                 <div class="input-group">
                     <label for="membername" id="label-member-name">Member Name</label>
                     <input type="text" class="form-control-page" id="membername"
@@ -103,7 +105,7 @@
                 <hr class="style-one">
 
 
-                <button type="submit" class="btn btn-primary-group">Create</button>
+                <button type="submit" class="btn btn-primary-group">Add Member</button>
             </div>
         </form>
     </div>
@@ -309,6 +311,7 @@
     </script>
     <script type="text/javascript" src="javascript/auth.js"></script>
     <script type="text/javascript" src="javascript/index.js"></script>
+    <script type="text/javascript" src="javascript/create-group.js"></script>
     <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 
