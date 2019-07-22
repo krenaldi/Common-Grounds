@@ -36,14 +36,13 @@ registerForm.addEventListener('submit', (e) => {
     }).then(() => {
         // reset form
         registerForm.reset();
-        registerForm.querySelector('.reg-error').innerHTML = '';
+        $('.reg-error').html(""); 
         // close modal
         closeRegModal();
     }).catch(err => {
-        registerForm.querySelector('.reg-error').innerHTML = err.message;
+        console.log(err.message);
+        $('.reg-error').html(err.message);  
     });
-    // redirect user to create group page
-    window.location.replace("group.html");
 });
 
 // logout
@@ -68,12 +67,11 @@ loginForm.addEventListener('submit', (e) => {
         //console.log(cred.user);
         // reset form
         loginForm.reset();
-        loginForm.querySelector('.login-error').innerHTML = ''; 
+        $('.login-error').html("");   
         // close modal
         closeLogModal();
     }).catch(err => {
-        loginForm.querySelector('.login-error').innerHTML = err.message;    
+        console.log(err.message);
+        $('.login-error').html(err.message);    
     });
-    // redirect user to search page
-    window.location.replace("search.html");
 });

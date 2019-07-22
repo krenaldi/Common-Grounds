@@ -29,10 +29,14 @@ function closeRegModal() {
     regButton.attr("data-dismiss", "modal");
     regButton.trigger('click');
     regButton.removeAttr("data-dismiss", "modal");
+    // redirect user to create group page
+    window.location.replace("group.html");
 }
 
 function closeLogModal() {
     logButton.attr("data-dismiss", "modal");
     logButton.trigger('click');
     logButton.removeAttr("data-dismiss", "modal");
+    // redirect user to create group page
+    window.location.replace("search.html");
 }
