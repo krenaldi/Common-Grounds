@@ -124,15 +124,13 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
    margin-top:20px;
 }
 
-#city {
-   width: 95%;
+#reg-city {
+   width: 75%;
 }
 
-#reg-state {
-   float: right;
-   margin-top: -38px;
-   height: 40px;
-}
+/* #reg-state {
+   
+} */
 
 
 
@@ -337,7 +335,7 @@ hr{
 }
 
 /*Group-page css sstart here */
-.contianer-fulid{
+.contianer-fluid{
    align-items: center;
    width: 95%;
    height: auto;
@@ -443,9 +441,6 @@ button#profile-btn:hover {
    border-color: 1px solid #3399CC;
    font-style: oblique;
 }
-<<<<<<< HEAD:css/style.css
-<<<<<<< HEAD:css/style.css
-
 
 
 #reg-city{
