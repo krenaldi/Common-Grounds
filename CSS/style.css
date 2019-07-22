@@ -84,6 +84,7 @@ color:  #330000;
    bottom: 10px;
    left: 25%;
 }
+
 #modal-or{
    margin:0 auto;
    display:block;
@@ -123,18 +124,21 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
    margin-top:20px;
 }
 
-input#city {
-   width: 75%;
+#city {
+   width: 95%;
 }
 
-select#reg-state {
+#reg-state {
    float: right;
    margin-top: -38px;
-   position: relative;
    height: 40px;
 }
+
+
+
+
 /* Main page container*/
-.contianer-fulid-main{
+.contianer-fluid-main{
    align-items: center;
    width: 95%;
    height: auto;
@@ -163,13 +167,21 @@ mark{
 }
 
 /*Main-page-img*/
-#about-img-1{
+/* #about-img-1{
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   border: 1px solid black;
+} */
+
+#about-img{
+   margin:15px 0 15px 0;
 }
+
+
+
+
 /* main page content*/
 .main-content{
    align-items: center;
@@ -431,3 +443,68 @@ button#profile-btn:hover {
    border-color: 1px solid #3399CC;
    font-style: oblique;
 }
+<<<<<<< HEAD:css/style.css
+<<<<<<< HEAD:css/style.css
+
+
+
+#reg-city{
+   margin-left: -4.5px;
+   margin-right: 0px;
+   width: 85%;
+}
+
+#reg-state{
+   height: 38px;
+   margin-top: 15px; 
+   background-color:#fff;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #495057;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   border-radius: .25rem;
+   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   width: 15%;
+   margin-right:0;
+   margin-left: 4.5px;
+}
+
+#displayName,
+#city,
+#reg-email,
+#reg-password,
+#login-password{
+   margin-top: 15px;
+}
+
+#login-email{
+   margin-top: 70px;
+}
+
+h6{
+   text-align: center;
+   font-style: italic;
+   color: #3399CC;
+}
+
+#welcome{
+   font-family: 'Amatic SC', cursive;
+   letter-spacing: 2px;
+   margin-top: 10px;
+   color:rgb(15, 92, 131);
+   text-align: center;
+   font-weight: bold;
+   margin-bottom: 0px; 
+}
+
+#subwelcome{
+   font-family: 'Amatic SC', cursive;
+   letter-spacing: 2px;
+   color:rgb(15, 92, 131);
+   text-align: center;
+   font-weight: bold;
+}
+
