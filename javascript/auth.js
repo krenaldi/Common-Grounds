@@ -34,8 +34,15 @@ registerForm.addEventListener('submit', (e) => {
     }).then(() => {
         // reset form
         registerForm.reset();
+        $('.reg-error').html(""); 
         // close modal
         closeRegModal();
+<<<<<<< HEAD
+=======
+    }).catch(err => {
+        console.log(err.message);
+        $('.reg-error').html(err.message);  
+>>>>>>> origin
     });
 });
 
@@ -59,7 +66,17 @@ loginForm.addEventListener('submit', (e) => {
         //console.log(cred.user);
         // reset form
         loginForm.reset();
+<<<<<<< HEAD
     });
     // close modal
     closeLogModal();
+=======
+        $('.login-error').html("");   
+        // close modal
+        closeLogModal();
+    }).catch(err => {
+        console.log(err.message);
+        $('.login-error').html(err.message);    
+    });
+>>>>>>> origin
 });
