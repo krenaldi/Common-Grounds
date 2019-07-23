@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // var config = {
 //   apiKey: "AIzaSyCd_w24x3LzqPkoUudKS9-H9OBfGUsgw4Y",
 //   authDomain: "project-b4bbd.firebaseapp.com",
@@ -368,4 +366,3 @@ function buildQueryUrl_Yelp() {
           
         
 }
->>>>>>> origin

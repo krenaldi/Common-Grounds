@@ -16,6 +16,8 @@ auth.onAuthStateChanged(user => {
     }
 });
 
+
+
 // signup
 const registerForm = document.querySelector('#register-form');
 registerForm.addEventListener('submit', (e) => {
@@ -37,12 +39,9 @@ registerForm.addEventListener('submit', (e) => {
         $('.reg-error').html(""); 
         // close modal
         closeRegModal();
-<<<<<<< HEAD
-=======
     }).catch(err => {
         console.log(err.message);
         $('.reg-error').html(err.message);  
->>>>>>> origin
     });
 });
 
@@ -51,6 +50,8 @@ const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
+    // redirect user to homepage on logout
+    window.location.replace("index.html");
 });
 
 // login
@@ -66,11 +67,6 @@ loginForm.addEventListener('submit', (e) => {
         //console.log(cred.user);
         // reset form
         loginForm.reset();
-<<<<<<< HEAD
-    });
-    // close modal
-    closeLogModal();
-=======
         $('.login-error').html("");   
         // close modal
         closeLogModal();
@@ -78,5 +74,4 @@ loginForm.addEventListener('submit', (e) => {
         console.log(err.message);
         $('.login-error').html(err.message);    
     });
->>>>>>> origin
 });

@@ -79,11 +79,11 @@ color:  #330000;
 
 #test-right,
 #test-left{
-   width: 50%;
-   position: absolute;
-   bottom: 10px;
-   left: 25%;
+   margin: 0 auto;
+  margin-top:25px;
 }
+
+
 
 #modal-or{
    margin:0 auto;
@@ -124,25 +124,11 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
    margin-top:20px;
 }
 
-<<<<<<< HEAD:css/style.css
-#city {
-   width: 95%;
-}
-
-#reg-state {
-   float: right;
-   margin-top: -38px;
-   height: 40px;
-}
-=======
 #reg-city {
    width: 75%;
 }
 
-/* #reg-state {
-   
-} */
->>>>>>> origin:CSS/style.css
+
 
 
 
@@ -453,12 +439,6 @@ button#profile-btn:hover {
    border-color: 1px solid #3399CC;
    font-style: oblique;
 }
-<<<<<<< HEAD:css/style.css
-<<<<<<< HEAD:css/style.css
-<<<<<<< HEAD:css/style.css
-
-=======
->>>>>>> origin:CSS/style.css
 
 
 #reg-city{

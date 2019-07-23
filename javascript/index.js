@@ -6,16 +6,16 @@ const profileDetails = document.querySelector('.profile-details');
 const setupUI = (user) => {
     if (user) {
         // profile info
-        const html = `
+        const profile = `
             <div>Logged in as ${user.email}</div>        
         `;
-        //profileDetails.innerHTML = html;
+        profileDetails.innerHTML = profile;
         // toggle UI elements
         loggedInLinks.forEach(item => item.style.display = 'block');
         loggedOutLinks.forEach(item => item.style.display = 'none');
     } else {
         // hide profile details
-        //profileDetails.innerHTML = '';
+        profileDetails.innerHTML = ' ';
         // toggle UI elements
         loggedInLinks.forEach(item => item.style.display = 'none');
         loggedOutLinks.forEach(item => item.style.display = 'block');
