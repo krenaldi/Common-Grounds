@@ -36,10 +36,12 @@ registerForm.addEventListener('submit', (e) => {
     }).then(() => {
         // reset form
         registerForm.reset();
+        $('.reg-error').html(""); 
         // close modal
         closeRegModal();
-        // redirect user to create group page
-        window.location.replace("group.html");
+    }).catch(err => {
+        console.log(err.message);
+        $('.reg-error').html(err.message);  
     });
 });
 
@@ -65,10 +67,11 @@ loginForm.addEventListener('submit', (e) => {
         //console.log(cred.user);
         // reset form
         loginForm.reset();
+        $('.login-error').html("");   
         // close modal
         closeLogModal();
-        // redirect user to search page
-        window.location.replace("search.html");
+    }).catch(err => {
+        console.log(err.message);
+        $('.login-error').html(err.message);    
     });
-
 });
