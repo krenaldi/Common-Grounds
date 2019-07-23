@@ -213,6 +213,64 @@ db.ref().on("value", function(snapshot) {
         }
         
       });
+
+      $("#searched").on("click", function(event) {
+        event.preventDefault();
+        var searched = $("#input-search").val().trim();
+
+        // var b = $("<h2>").text("Nearby Restaurants")
+        // $(".search-result").prepend(b)
+        // $("search-result").prepend($("<hr>"))
+        
+        var zomato2 = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://developers.zomato.com/api/v2.1/search?q=" + searched + "&apikey=d7db74dd4486cb039f810541d694f67d&count=9&lat=" + midLat + "&lon=" + midLong + "&radius=30000",
+          "method": "GET"
+        }
+
+        $.ajax(zomato2).done(function(resalt){
+          // console.log(resalt)
+          var results = resalt.restaurants
+          // console.log(results)
+          
+          $(".res").empty();
+
+          for (var i=0; i<results.length;i++){
+            var resDiv = $("<div class='res'>")
+            var resName = results[i].restaurant.name
+            var resCur = results[i].restaurant.currency
+            var rate = results[i].restaurant.user_rating.aggregate_rating
+            var adr = results[i].restaurant.location.address
+            var type = results[i].restaurant.cuisines
+  
+            var head = $("<h5>").text(resName)
+            var head2 = $("<p>").text(" Price: " + resCur + " , "+  " Rating: " + rate + "/5")
+            var p = $("<p>").text(" Address: " + adr)
+            var p1 = $("<p>").text(" Cuisine Type: " + type)
+            
+            resDiv.append(head);
+            resDiv.append(head2);
+            resDiv.append(p);
+            resDiv.append(p1);
+            resDiv.append("<hr>");
+  
+            $(".place-results").append(resDiv);
+          }
+          
+        });
+
+
+      });
+
+
+      var zomato2 = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://developers.zomato.com/api/v2.1/search?q=" + searched + "&count=9&lat=" + midLat + "&lon=" + midLong + "&radius=30000",
+        "method": "GET"
+      }
+
     }, 1000);
 
     
