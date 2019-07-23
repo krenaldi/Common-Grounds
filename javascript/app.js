@@ -57,7 +57,7 @@ db.ref().on("value", function(snapshot) {
 
   //  for ( var i = 0; i < snapshot.val().users; i++) {
 
-    console.log(snapshot.val());
+    // console.log(snapshot.val());
 
     // console.log(snapshot.val().users)
     // console.log(snapshot.val().users)
@@ -68,14 +68,14 @@ db.ref().on("value", function(snapshot) {
       usersArray.push(users[i])
       
     }
-    console.log(usersArray);
-    console.log(usersArray[1].city);
-    console.log(usersArray[1].displayname)
+    // console.log(usersArray);
+    // console.log(usersArray[1].city);
+    // console.log(usersArray[1].displayname)
     acquireLocation()
     buildQueryUrl_Loc();
     $("#dynamic-chat").empty();
     for (var i = 0; usersArray.length; i++) {
-      console.log(usersArray[i].displayname)
+      // console.log(usersArray[i].displayname)
       var name = $("<div id='chat-userName'>" + usersArray[i].displayname + "</div>");
       $("#dynamic-chat").append(name);
     }
@@ -116,7 +116,7 @@ db.ref().on("value", function(snapshot) {
       for (var i = 0; i < usersArray.length; i++) {
         var location = usersArray[i].city  + " " + usersArray[i].state
 
-        console.log(location)
+        // console.log(location)
 
         tempLocations.push(location);
 
@@ -126,7 +126,7 @@ db.ref().on("value", function(snapshot) {
 
   // acquireLocation()
 
-  console.log(tempLocations);
+  // console.log(tempLocations);
   
   
   
@@ -148,10 +148,10 @@ db.ref().on("value", function(snapshot) {
       
       } 
       
-      console.log("midpoint Latitude");
-      console.log(midLat);
-      console.log("midpoint Longitude");
-      console.log(midLong);
+      // console.log("midpoint Latitude");
+      // console.log(midLat);
+      // console.log("midpoint Longitude");
+      // console.log(midLong);
 
       var settings = {
         "async": true,
@@ -161,9 +161,9 @@ db.ref().on("value", function(snapshot) {
       }
       
       $.ajax(settings).done(function (response) {
-        console.log(response);
-        console.log(response.address.city)
-        console.log(response.address.state)
+        // console.log(response);
+        // console.log(response.address.city)
+        // console.log(response.address.state)
         var place = $("<span style='float:right; padding: 0 10% 0 0'><h4>" + response.address.city + ", " + response.address.state + "</h4></span>");
         $("#search-form").append(place);
       }); 
@@ -186,9 +186,9 @@ db.ref().on("value", function(snapshot) {
       }
 
       $.ajax(zomato).done(function(salty){
-        console.log(salty)
+        // console.log(salty)
         var results = salty.nearby_restaurants
-        console.log(results)
+        // console.log(results)
 
         for (var i=0; i<results.length;i++){
           var resDiv = $("<div class='res'>")
@@ -261,9 +261,9 @@ function buildQueryUrl_Loc() {
       
       $.ajax(settings[0]).then(function (response) {
         
-        console.log("1st Geo Location");
-        console.log(response[0].lat);
-        console.log(response[0].lon);
+        // console.log("1st Geo Location");
+        // console.log(response[0].lat);
+        // console.log(response[0].lon);
           
         tempLat.push(response[0].lat);
           
@@ -277,9 +277,9 @@ function buildQueryUrl_Loc() {
       
       $.ajax(settings[1]).then(function (response) {
             
-        console.log("2nd Geo Location");
-        console.log(response[0].lat);
-        console.log(response[0].lon);
+        // console.log("2nd Geo Location");
+        // console.log(response[0].lat);
+        // console.log(response[0].lon);
             
         tempLat.push(response[0].lat);
         
@@ -293,9 +293,9 @@ function buildQueryUrl_Loc() {
         
       $.ajax(settings[2]).then(function (response) {
          
-        console.log("3rd Geo Location");
-        console.log(response[0].lat);
-        console.log(response[0].lon);
+        // console.log("3rd Geo Location");
+        // console.log(response[0].lat);
+        // console.log(response[0].lon);
             
         tempLat.push(response[0].lat);
         
@@ -310,9 +310,9 @@ function buildQueryUrl_Loc() {
          
       $.ajax(settings[3]).then(function (response) {
               
-        console.log("4th Geo Location");
-        console.log(response[0].lat);
-        console.log(response[0].lon);
+        // console.log("4th Geo Location");
+        // console.log(response[0].lat);
+        // console.log(response[0].lon);
                 
         tempLat.push(response[0].lat);
                 
@@ -326,9 +326,9 @@ function buildQueryUrl_Loc() {
              
       $.ajax(settings[4]).then(function (response) {
                 
-        console.log("5th Geo Location");
-        console.log(response[0].lat);
-        console.log(response[0].lon);
+        // console.log("5th Geo Location");
+        // console.log(response[0].lat);
+        // console.log(response[0].lon);
         
         tempLat.push(response[0].lat);
         
@@ -355,8 +355,8 @@ myLoop(tempLocations.length)
 
 // buildQueryUrl_Loc();
 
-console.log(tempLat);
-console.log(tempLong);
+// console.log(tempLat);
+// console.log(tempLong);
 
 
 // will build the YELP ajax GET when needed with geomidpoint as start
