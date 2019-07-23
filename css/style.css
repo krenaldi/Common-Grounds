@@ -79,11 +79,11 @@ color:  #330000;
 
 #test-right,
 #test-left{
-   width: 50%;
-   position: absolute;
-   bottom: 10px;
-   left: 25%;
+   margin: 0 auto;
+  margin-top:25px;
 }
+
+
 
 #modal-or{
    margin:0 auto;
@@ -128,9 +128,7 @@ button#lg-start:hover, button#lg-log:hover, button#lg-reg:hover, button#lg-submi
    width: 75%;
 }
 
-/* #reg-state {
-   
-} */
+
 
 
 
