@@ -170,8 +170,8 @@ db.ref().on("value", function(snapshot) {
       
       $("#googleMap").empty();
 
-      var a = $("<img src='https://maps.locationiq.com/v2/staticmap?key=965e216b522057&center=" + midLat + "," + midLong +"&zoom=12&size=1190x398&format=<format>&maptype=<MapType>&markers=icon:large-blue-cutout|" + midLat + "," + midLong + "&markers=icon:<icon>|<latitude>,<longitude>'>")
-  
+      var a = $("<img src='https://maps.locationiq.com/v2/staticmap?key=965e216b522057&center=" + midLat + "," + midLong +"&zoom=12&size=1190x400&format=<format>&maptype=<MapType>&markers=icon:large-blue-cutout|" + midLat + "," + midLong + "&markers=icon:<icon>|<latitude>,<longitude>' class='img-fluid' style='max-height: 400px; min-height:400px'>")
+      
       $("#googleMap").append(a);
 
       var b = $("<h2>").text("Nearby Restaurants")
