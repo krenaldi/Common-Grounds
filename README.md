@@ -56,7 +56,7 @@ How to effectively track all members location and find a common geographical cen
 
 ## Project link:
 
-[Common Grounds](https://krenaldi.github.io/Project-1/)
+[Common Grounds](https://krenaldi.github.io/Common-Grounds/)
 
 ---------------------------
 
